@@ -2,7 +2,7 @@
 theme: seriph
 title: Hahow 如何保護串流內容（下）
 info: 理解 DRM 數位版權管理：從 Widevine 到 FairPlay 的串流保護實務
-background: ./assets/cover.png
+background: /cover.png
 class: text-center
 highlighter: shiki
 drawings:
