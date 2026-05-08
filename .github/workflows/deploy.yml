@@ -35,7 +35,7 @@ jobs:
             name="${dir%/}"
             if [[ "$name" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+ ]] && [ -f "$name/slides.md" ]; then
               echo "Building: $name"
-              npx slidev build "$name/slides.md" --base "/${{ github.event.repository.name }}/$name/" --out "dist/$name"
+              npx slidev build "$name/slides.md" --base "/${{ github.event.repository.name }}/$name/" --out "$(pwd)/dist/$name"
             fi
           done
 
