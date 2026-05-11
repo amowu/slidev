@@ -31,6 +31,12 @@ VOD = Video On Demand
 
 # Recap
 
+<img src="./assets/image5.png" class="w-full h-full object-contain" />
+
+---
+
+# Recap
+
 <img src="./assets/image3.png" class="w-full h-full object-contain" />
 
 ---
@@ -38,12 +44,6 @@ VOD = Video On Demand
 # Recap
 
 <img src="./assets/image4.png" class="w-full h-full object-contain" />
-
----
-
-# Recap
-
-<img src="./assets/image5.png" class="w-full h-full object-contain" />
 
 ---
 
@@ -137,33 +137,23 @@ layout: section
 # DRM vs 單純加密
 
 <div class="grid grid-cols-2 gap-8 mt-6">
-<div v-click>
+<div v-click class="p-4 bg-green-100/80 dark:bg-green-900/50 rounded-lg">
 
 ### 單純加密
-```
-拿到鑰匙 → 解密 → 擁有檔案
-可以：無限次播放、拷貝分享
-```
+- 拿到鑰匙 → 解密 → 擁有檔案
+- 可以：無限次播放、拷貝分享
 
 </div>
-<div v-click>
+<div v-click class="p-4 bg-red-100/80 dark:bg-red-900/50 rounded-lg">
 
 ### DRM（數位版權管理）
-```
-有鑰匙，但...
+- 有鑰匙，但...
 - 只能看 24 小時
 - 只能看 1080p
 - 只能在台灣看
 - 不能截圖、錄影
-```
 
 </div>
-</div>
-
-<div v-click class="mt-8 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
-
-DRM 更像一位「保全」：管你進屋後**能待多久、能不能拍照、能不能把東西帶走**
-
 </div>
 
 <!--
@@ -184,6 +174,7 @@ DRM 的運作包含三個核心機制：
 
 # CDM — Content Decryption Module
 
+<div v-click>
 <div class="grid grid-cols-2 gap-8">
 <div>
 
@@ -196,7 +187,6 @@ DRM 的運作包含三個核心機制：
 > JavaScript 無法觸碰 CDM 內容——它是個「黑盒子」
 
 </div>
-<div v-click>
 
 ```
 ┌──────────────────────────┐
@@ -1045,6 +1035,14 @@ layout: section
 從黑屏截圖到 AI 隱形浮水印，我們看到串流技術的演進始終圍繞著一個核心：安全性不在於「絕對不可破解」，而在於「不斷增加破解成本」（當然，前提是產品開發成本不會先讓老闆崩潰，畢竟安全性也是有邊際效益的）
 -->
 
+</div>
+
+---
+layout: center
+---
+
+<div class="text-7xl font-bold">
+Demo
 </div>
 
 ---
