@@ -729,6 +729,61 @@ layout: section
 # 6 · 怎麼開始
 
 ---
+
+# 怎麼導入
+
+- **從下一個新功能開始**　不要回頭幫既有系統補 spec，那是無底洞
+- **讓 archive 自然長出 specs**　每完成一個 change，`openspec/specs/` 就多一塊
+- **提案進 PR review**　規格跟程式碼一起被 review，才會是活的
+- **小改動也走一次**　7 個 task 的提案花不了多少時間，但它建立了習慣
+
+---
+
+# 三個月下來
+
+`hahow-for-business-frontend`，2026-05-27 起。
+
+| | |
+|---|---|
+| 累積 change | **16 個** |
+| 正式 spec | **14 份** |
+| 單一 change 規模 | **7 個 task** ～ **52 個 task** |
+
+<div class="mt-8 text-gray-400">
+  最小的是三個下拉選單文案，最大的是 assignment editor 的自動指派。
+  同一套流程都撐得住。
+</div>
+
+---
+
+# 延伸：Superpowers
+
+規格解決 **what**，紀律解決 **how**。
+
+Superpowers 是一套用 15 個 Skills 定義 AI 開發流程的框架：
+
+- `brainstorming`　動手前先一次問一個問題，釐清需求
+- `writing-plans`　假設執行者對專案一無所知，任務拆到 2–5 分鐘
+- `test-driven-development`　沒先寫測試就不能寫 code
+- `verification-before-completion`　宣稱完成前必須執行驗證指令，禁止用「應該」「大概」
+
+---
+
+# Superpowers 的取捨
+
+- 依賴 AI 自律，沒有技術手段強制執行
+- 成本高——subagent 模式每個任務開三個 session
+- 適合高品質要求、長期維護的專案；不適合快速原型
+
+<div class="mt-10 text-center">
+
+<div class="text-2xl text-gray-400">下次 AI 說「我做完了」</div>
+
+<div class="text-5xl mt-4 font-bold">反問它——完成了什麼？</div>
+
+</div>
+
+---
 layout: center
 ---
 
