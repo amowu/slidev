@@ -72,7 +72,7 @@
 4. Vibe Coding 的危險：風格不一致／漏掉沒說的需求／自信地宣稱完成
 5. 轉折：問題不在 AI 不夠強，在於沒人定義過什麼叫「完成」
 
-### 第 2 章 — SDD 是什麼（11 張）
+### 第 2 章 — SDD 是什麼（12 張）
 
 6. SDD 不是新發明——瀑布、TDD、BDD 的延續
 7. 核心定位：成為 AI 與人的共同語言
@@ -118,7 +118,7 @@
 38. 轉折：真正的價值不是控制 AI，是留下決策脈絡
 39. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
 
-### 第 6 章 — 怎麼開始（6 張）
+### 第 6 章 — 怎麼開始（5 張）
 
 40. 導入建議：從下一個新功能開始，不要回頭補 spec
 41. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
@@ -147,7 +147,7 @@ drawings:
 transition: slide-left
 ```
 
-封面沿用 `public/cover.png`。
+封面不使用背景圖片。專案根目錄的 `public/` 是空的；DRM 那場的 `background: /cover.png` 實際來自 `2026-05-11-DRM/public/cover.png`（Slidev 的 `public/` 以 slides.md 所在資料夾為基準）。本場暫無封面素材，先用純文字封面；日後若要加圖，放到 `2026-08-03-OpenSpec/public/cover.png` 並在 frontmatter 補 `background: /cover.png` 即可。
 
 ### 版面規則
 
