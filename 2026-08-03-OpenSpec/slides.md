@@ -254,6 +254,78 @@ layout: section
 # 3 · 為什麼是 OpenSpec
 
 ---
+
+# 工具地景
+
+<div class="text-sm">
+
+| 工具 | 工作流 | 特色 | 定位 |
+|---|---|---|---|
+| **Amazon Kiro** | Requirements → Design → Tasks | EARS、property-based testing、Hooks | Spec-first 為主 |
+| **GitHub Spec Kit** | Constitution → Specify → Plan → Tasks | Constitution 定義原則、高度可客製 | Spec-first |
+| **Tessl** | Plan / Spec / Test | 免費 Spec Registry，逾一萬個 OSS 用法規格 | 主打 Spec-as-source |
+| **OpenSpec** | proposal → apply → archive | `specs` 與 `changes` 分離、純 Markdown | Spec-anchored |
+
+</div>
+
+---
+
+# Greenfield 還是 Brownfield？
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+### Greenfield
+
+全新專案，沒有包袱。
+從第一天就能把規格寫好。
+
+</div>
+<div>
+
+### Brownfield
+
+既有系統，滿地隱性規則。
+改一個地方，得先知道會碰到什麼。
+
+</div>
+</div>
+
+<div class="mt-10 text-center text-2xl">
+  我們是後者。
+</div>
+
+---
+
+# OpenSpec 的取捨
+
+- **Brownfield-first**　`specs`（現在的系統長怎樣）與 `changes`（這次要改什麼）分離，強迫思考「這次變更會影響什麼」
+- **全部是 Markdown**　進版控、走 PR review、不需要學新格式
+- **不需要 API key**　不依賴雲端服務，沒有額外成本與資安評估
+- **不綁 AI 工具**　Claude Code、Cursor、GitHub Copilot、Codex、Gemini CLI 都能用
+
+---
+
+# 我們試過 Spec Kit
+
+`specs/001-time-basis-filter/` 還留在 repo 裡——只有這一個 feature。
+
+```plain
+specs/001-time-basis-filter/
+├── checklists/requirements.md
+├── data-model.md
+├── plan.md
+├── research.md
+├── spec.md
+└── tasks.md
+```
+
+<div class="mt-6 text-gray-400">
+  六份文件、一次功能。流程完整，但對「改既有系統」這件事幫助有限——
+  它沒有回答「現在的系統長怎樣」。
+</div>
+
+---
 layout: section
 ---
 
