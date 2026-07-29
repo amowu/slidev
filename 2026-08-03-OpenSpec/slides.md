@@ -628,6 +628,101 @@ layout: section
 # 5 · 現實：spec 不是銀彈
 
 ---
+
+# 同一份 spec，跑三次
+
+功能都對，但程式碼結構每次都不一樣。
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+### 「可以動就好」派
+
+功能正常就好，細節差異可接受。
+
+</div>
+<div>
+
+### 「結構一致性」派
+
+長期下來 codebase 會越來越難維護。
+
+</div>
+</div>
+
+<div class="mt-10 text-gray-400">
+  LLM 是非確定性的。同樣的輸入，不保證同樣的輸出——這跟程式碼需要的確定性天生衝突。
+</div>
+
+---
+
+# 自然語言天生曖昧
+
+> 點擊按鈕顯示對話框
+
+這句話沒有回答的問題：
+
+- 是 modal 還是非 modal？
+- 出現在畫面哪個位置？
+- 裡面放什麼內容？
+- 怎麼關閉？點外面算不算？
+- 有沒有進場動畫？
+- 手機上呢？
+- 開啟時背景能不能捲動？
+
+---
+
+# 虛假的控制感
+
+我們以為透過規格控制了 AI，但 AI 仍然在自己做決定。
+
+- Model-Driven Development 有過同樣的願景，最後因為缺乏彈性而沒有普及
+- 規格寫得越細，越接近「用自然語言寫程式」——而自然語言不擅長這件事
+- 德文有個詞精準描述這個風險：**Verschlimmbesserung**，想改善卻讓事情變得更糟
+
+---
+layout: center
+---
+
+# 真正的價值，不是控制 AI
+
+<div class="text-3xl mt-8">
+  而是留下決策脈絡
+</div>
+
+<div class="text-lg mt-8 text-gray-400">
+  程式碼會被重寫、被丟棄，但「當初為什麼這樣決定」不會自動留下來
+</div>
+
+---
+
+# 一個真實的例子
+
+`2026-07-23-fix-stale-session-signout`——客戶 subdomain 對調後約 50 人被鎖在登入頁。
+
+<div class="text-xs mt-4">
+
+```md
+**範圍決定（PR #1544 review 後）**：原提案曾包含「登入頁切換帳號出口」。
+經 code review 釐清，客戶實際遇到的死路完全由 signOutWithFlash 未帶 cookie
+造成，修好登出即解決；「登入頁切換帳號」是一條客戶走不到的路徑，且屬於
+未經 PM 確認的新產品行為，因此自本 change 移除。
+```
+
+```md
+登出成功時 session cookie 不會消失。Rails 使用 cookie-based session store，
+sign_out 是重設 session 並回一個新的空 session cookie。驗收應以「能否以
+另一組帳號登入」為準，不可用「cookie 是否消失」判斷。
+```
+
+</div>
+
+<div class="mt-4 text-gray-400 text-sm">
+  上：proposal.md 記下砍掉一半範圍的理由。下：design.md 記下踩過才知道的驗收陷阱。<br>
+  沒有這兩段，下一個人只會看到一個「為什麼只改了這麼一點」的 PR。
+</div>
+
+---
 layout: section
 ---
 
