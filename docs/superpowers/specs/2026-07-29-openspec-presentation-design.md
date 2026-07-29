@@ -62,7 +62,7 @@
 
 ## 投影片大綱
 
-內容 43 張，另加六章各一張章節過場，總計 49 張。
+內容 44 張，另加六章各一張章節過場，總計 50 張。
 
 ### 第 1 章 — 開場（5 張）
 
@@ -118,12 +118,13 @@
 38. 轉折：真正的價值不是控制 AI，是留下決策脈絡
 39. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
 
-### 第 6 章 — 怎麼開始（5 張）
+### 第 6 章 — 怎麼開始（6 張）
 
 40. 導入建議：從下一個新功能開始，不要回頭補 spec
 41. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
 42. Superpowers：規格解決 what，紀律解決 how
 43. Superpowers 的取捨（成本高、依賴 AI 自律）＋結語：「下次 AI 說完成了，反問——完成了什麼？」
+44. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
 
 ## 視覺與技術規格
 
@@ -181,3 +182,17 @@ transition: slide-left
 
 1. `openspec view` 互動儀表板截圖
 2. `openspec validate --strict` 輸出截圖
+
+## References
+
+簡報最後一張（第 44 張）需列出以下來源：
+
+- 高見龍，[SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
+- 高見龍，[OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
+- 高見龍，[Spec-as-source 的理想與現實](https://kaochenlong.com/sdd-spec-as-source)
+- 高見龍，[給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills)
+
+另附工具官方連結：
+
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec)（`@fission-ai/openspec`）
+- [Superpowers](https://github.com/obra/superpowers)
