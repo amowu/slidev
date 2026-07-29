@@ -332,6 +332,143 @@ layout: section
 # 4 · 實戰：三個指令
 
 ---
+
+# 安裝與初始化
+
+```bash
+npm install -g @fission-ai/openspec@latest
+cd my-project
+openspec init
+```
+
+初始化後的結構：
+
+```plain
+openspec/
+├── config.yaml
+├── specs/      # 系統現在長什麼樣（正式規格）
+└── changes/
+    └── archive/  # 已完成的變更
+```
+
+---
+
+# 三個指令
+
+```mermaid
+flowchart LR
+  P["/opsx:propose<br/>草擬提案"] --> A["/opsx:apply<br/>實作"]
+  A --> R["/opsx:archive<br/>歸檔"]
+  R -.->|合併規格差異| S[("openspec/specs")]
+```
+
+<div class="mt-6 text-gray-400">
+  另有 <code>/opsx:explore</code> 用於動手前先摸清既有實作。
+</div>
+
+---
+
+# Stage 1 · propose
+
+```bash
+/opsx:propose 測驗支援複選題
+```
+
+產出一個變更資料夾：
+
+```plain
+openspec/changes/2026-06-26-quiz-multiple-choice/
+├── proposal.md   # 為什麼做、改什麼、影響什麼
+├── design.md     # 技術決策與取捨
+├── tasks.md      # 拆好的任務清單
+└── specs/        # 這次變更對規格的 delta
+```
+
+---
+
+# proposal.md · Why
+
+<div class="text-xs">
+
+```md
+## Why
+
+平台測驗目前只支援「單選題」，學員每題只能選一個答案，無法評估需要
+同時掌握多個正確觀念的情境（法規確認、多步驟流程判斷、安全操作規範）。
+後端已預先實作複選題的資料模型與評分邏輯，前端 Admin 也已寫好 Checkbox UI
+但暫時封印待開放——本次為「解除封印」，補上缺失的 Admin 設置與學員端
+作答／結果頁呈現。
+```
+
+</div>
+
+<div class="mt-4 text-gray-400 text-sm">
+  來源：<code>openspec/changes/archive/2026-06-26-quiz-multiple-choice/proposal.md</code>
+</div>
+
+---
+
+# proposal.md · What Changes
+
+<div class="text-xs">
+
+```md
+- **Admin 題目編輯**：解除封印「＋ 複選題」新增按鈕與每道題目的
+  「題目類型」Select（單選 ↔︎ 複選）；複選題以 Checkbox 標示多個正確答案、
+  單選題維持 Radio（現有行為）。
+- **Admin 送出驗證**：複選題至少須標示一個正確答案；選項至少保留 2 個。
+- **學員端作答頁**：複選題以 Checkbox 呈現、可同時勾選／取消多個選項，
+  並在題號旁顯示「複選」標籤。
+- **範圍界定**：本次僅實作 Web（Admin + 學員端）；App 由 mobile 團隊另行實作。
+  前端不自行計算分數，僅呈現後端回傳的分數與各選項結果。
+```
+
+</div>
+
+<div class="mt-4 text-gray-400 text-sm">
+  注意最後一段——<strong>寫下不做什麼</strong>，跟寫下要做什麼一樣重要。
+</div>
+
+---
+
+# proposal.md · Capabilities
+
+這一段決定了 delta 要寫進哪幾份規格。
+
+<div class="text-xs">
+
+```md
+### New Capabilities
+- `quiz-question-editor`: Admin 測驗單元編輯頁的題目編輯能力——新增題目
+  （單選／複選）、題目類型切換、選項管理與正確答案標示、送出前驗證。
+
+### Modified Capabilities
+- `quiz-taking-page`: 新增複選題作答行為——Checkbox 多選/取消、「複選」
+  題型標籤、含複選題的送出按鈕啟用條件、複選 choiceIds 提交格式。
+- `quiz-result-page`: 新增複選題結果呈現——四象限選項上色、全對全錯
+  badge、「正確答案」純文字區塊。
+```
+
+</div>
+
+---
+
+# 對應的 specs 結構
+
+一個 capability 一個資料夾，各自一份 `spec.md`。
+
+```plain
+openspec/changes/2026-06-26-quiz-multiple-choice/specs/
+├── quiz-question-editor/spec.md   # ADDED
+├── quiz-taking-page/spec.md       # MODIFIED
+└── quiz-result-page/spec.md       # MODIFIED
+```
+
+<div class="mt-8 text-gray-400">
+  跨模組的變更不會被壓成一份大文件，而是各自落在它影響的能力上。
+</div>
+
+---
 layout: section
 ---
 
