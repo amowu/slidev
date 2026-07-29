@@ -469,6 +469,159 @@ openspec/changes/2026-06-26-quiz-multiple-choice/specs/
 </div>
 
 ---
+
+# Delta 格式
+
+變更的規格不是重寫整份，而是描述「差異」。
+
+<v-clicks>
+
+```md
+## ADDED Requirements
+### Requirement: 新增題目按鈕支援單選與複選
+```
+
+```md
+## MODIFIED Requirements
+### Requirement: 依題目類型渲染選項元件
+（寫出完整的修改後內容，不是只寫改動處）
+```
+
+```md
+## REMOVED Requirements
+### Requirement: Password Reset via Email
+**Reason**: 改用更安全的驗證方式
+```
+
+</v-clicks>
+
+---
+
+# Scenario 的寫法
+
+每個 Requirement **至少要有一個 Scenario**，強制性用 `SHALL` 或 `MUST`。
+
+<div class="text-xs">
+
+```md
+### Requirement: 複選題顯示「複選」題型標籤
+
+作答頁 SHALL 在複選題「問題 n」（題號）右側、同列顯示「複選」標籤；
+單選題 SHALL NOT 顯示題型標籤。
+
+#### Scenario: 複選題顯示「複選」標籤（AC-EXAM-03）
+
+- **WHEN** 學員進入作答頁且測驗包含複選題
+- **THEN** 系統應在複選題「問題 n」右側顯示「複選」標籤，單選題不顯示
+```
+
+</div>
+
+<div class="mt-4 text-gray-400 text-sm">
+  來源：<code>.../quiz-multiple-choice/specs/quiz-taking-page/spec.md</code>　括號裡的
+  <code>AC-EXAM-03</code> 是 PRD 的驗收條件編號——規格可以直接追溯回需求。
+</div>
+
+---
+
+# Stage 2 · apply
+
+```bash
+/opsx:apply quiz-multiple-choice
+```
+
+AI 依 `tasks.md` 逐項完成，做完一項勾一項。
+
+<div class="text-xs mt-4">
+
+```md
+## 1. GraphQL 契約與型別
+
+- [x] 1.1 學員端 gql 的三處 questions 補上 questionType
+- [x] 1.2 responses 由 myChoice/correctChoice 改為 myChoices、correctChoices
+- [x] 1.3 submitQuizPaper mutation 改以 ResponseInput.choiceIds 提交
+- [x] 1.4 執行 yarn generate 並修正衍生型別錯誤
+```
+
+</div>
+
+<div class="mt-4 text-gray-400 text-sm">
+  規格在實作途中發現不對，就當場改規格——這是流程的一部分，不是失誤。
+</div>
+
+---
+
+# Stage 3 · archive
+
+```bash
+/opsx:archive quiz-multiple-choice
+```
+
+做兩件事：
+
+- 把變更資料夾移進 `openspec/changes/archive/`
+- 把 delta 合併回 `openspec/specs/`，成為系統的新現況
+
+```plain
+openspec/specs/
+├── quiz-question-editor/spec.md   ← 新增
+├── quiz-taking-page/spec.md       ← 更新
+└── quiz-result-page/spec.md       ← 更新
+```
+
+---
+
+# 另一個極端
+
+不是每個提案都是 31 個 task。
+
+<div class="text-xs">
+
+```md
+## Why
+
+班次列表頁的「自動偵測狀態」篩選下拉，與表格欄位 AutoDetectionStatusCell
+對相同狀態使用了不一致的文案：篩選器顯示「尚未開始／已結束／已結束（異常）」，
+但欄位實際渲染「未開始／已停止／已停止＋異常」。同一狀態出現兩種說法會造成
+使用者困惑。本次將篩選器文案對齊欄位的命名。
+```
+
+</div>
+
+<div class="mt-4">
+
+`2026-06-11-align-auto-detection-filter-labels`：**7 個 task、1 份 spec、純文案調整**。
+同一套流程，從改三個下拉選單到 52 個 task 的大功能都撐得住。
+
+</div>
+
+---
+
+# 什麼時候不需要提案？
+
+判斷標準：**這次改動會不會讓系統行為跟 `specs` 裡寫的不一樣。**
+
+不需要提案的情況：
+
+- 修 bug（讓程式**符合**既有規格）
+- 修錯字、調整格式
+- 更新非破壞性的相依套件
+- 為現有行為補測試
+
+<div class="mt-6">
+
+常用指令：
+
+```bash
+openspec list                      # 進行中的變更
+openspec show <name>               # 看細節
+openspec validate <name> --strict  # 檢查格式
+openspec view                      # 互動式儀表板
+```
+
+</div>
+
+---
 layout: section
 ---
 
