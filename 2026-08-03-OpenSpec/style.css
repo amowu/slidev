@@ -1,0 +1,69 @@
+/*
+ * 本簡報的樣式覆寫。Slidev 會自動載入與 slides.md 同層的 style.css。
+ *
+ * 為什麼需要 !important：
+ * Slidev 的基礎規則是 `.slidev-code { font-size: var(--slidev-code-font-size) !important }`，
+ * 因此包一層 `text-xs` / `text-xl` 之類的工具類對 code block 完全無效——工具類只會
+ * 影響外層 `.slidev-code-wrapper`，真正的 <pre> 仍讀自己的變數。要改字級只能同樣
+ * 用 !important 蓋過，或改寫該變數。
+ *
+ * 用法：在需要放大的投影片 frontmatter 加上 `class: code-lg`。
+ * 適用時機：教學用的短範例（指令、目錄樹、格式示意）。
+ * 不適用：proposal / spec 的真實節錄——它們行寬長，放大會橫向溢出，維持預設 12px。
+ */
+
+/* 教學用短範例：指令、目錄樹、格式示意 */
+.code-lg .slidev-code {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}
+
+/*
+ * 真實 proposal / spec 節錄。這些節錄的中文行寬長（一行三、四十字），
+ * 放大的上限由「會不會橫向溢出」決定，而不是垂直空間。1rem 是實測後
+ * 全部七張都不溢出的最大值。
+ */
+.code-md .slidev-code {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+/*
+ * 「EARS 的句型」那張的關鍵字上色。
+ *
+ * 為什麼不用 code block：` ```text ` 沒有語法規則，Shiki 不會上色；改用會上色的
+ * language（例如 gherkin）則需要 Feature/Scenario 的上下文，而且 SHALL 仍然不是
+ * 它的關鍵字。因此改為手寫 markup，逐字上色。
+ *
+ * 配色沿用 deck 裡 Shiki 的 vitesse-light / vitesse-dark，讓它與其他 code block
+ * 看起來是同一套系統。Slidev 深色模式會在 html 掛上 .dark。
+ */
+
+.ears {
+  font-family: var(--slidev-code-font-family);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  white-space: pre;
+  background: var(--slidev-code-background);
+  padding: var(--slidev-code-padding);
+  border-radius: var(--slidev-code-radius, 6px);
+  overflow-x: auto;
+}
+
+.ears-cond {
+  color: #1c6b48;
+  font-weight: 600;
+}
+
+.ears-must {
+  color: #ab5959;
+  font-weight: 600;
+}
+
+html.dark .ears-cond {
+  color: #4d9375;
+}
+
+html.dark .ears-must {
+  color: #cb7676;
+}
