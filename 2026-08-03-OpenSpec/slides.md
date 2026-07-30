@@ -243,6 +243,8 @@ Requirements，要做什麼。Design，怎麼做。Tasks，拆成幾步。
 -->
 
 ---
+class: code-lg
+---
 
 # 階段一：Requirements
 
@@ -260,14 +262,6 @@ Requirements，要做什麼。Design，怎麼做。Tasks，拆成幾步。
 <div class="mt-6 text-gray-400">
   重點不是「使用者故事」這個格式，而是驗收標準——沒有它，「完成」就沒有定義。
 </div>
-
-<style>
-/* 本張的節錄很短，放大到接近正文字級，讓後排也看得清楚 */
-.slidev-code {
-  font-size: 1.15rem !important;
-  line-height: 1.7 !important;
-}
-</style>
 
 <!--
 第一階段，Requirements。寫下要做什麼，以及——這個更重要——怎樣算做到了。
@@ -350,6 +344,8 @@ Requirements，要做什麼。Design，怎麼做。Tasks，拆成幾步。
 -->
 
 ---
+class: code-lg
+---
 
 # EARS 的句型
 
@@ -392,6 +388,8 @@ WHEN，描述觸發條件。THEN，描述系統必須做的事。中間的 SHALL
 第三，壓縮 AI 的猜測空間。句型固定，語意就沒有解釋餘地，AI 不用猜你的意思。
 -->
 
+---
+class: code-lg
 ---
 
 # SDD 的三個層級
@@ -556,6 +554,8 @@ OpenSpec 的四個取捨，剛好都打在我們的需求上。
 -->
 
 ---
+class: code-lg
+---
 
 # 我們試過 Spec Kit
 
@@ -598,6 +598,8 @@ layout: section
 接下來是今天的重點，實際怎麼操作。這一段我會用我們自己的變更紀錄走一遍。
 -->
 
+---
+class: code-lg
 ---
 
 # 安裝與初始化
@@ -654,6 +656,8 @@ propose，草擬提案。apply，實作。archive，歸檔。
 -->
 
 ---
+class: code-lg
+---
 
 # Stage 1 · propose
 
@@ -685,7 +689,7 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 
 # proposal.md · Why
 
-<div class="text-xs">
+<div>
 
 ```md
 ## Why
@@ -717,7 +721,7 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 
 # proposal.md · What Changes
 
-<div class="text-xs">
+<div>
 
 ```md
 - **Admin 題目編輯**：解除封印「＋ 複選題」新增按鈕與每道題目的
@@ -756,7 +760,7 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 
 這一段決定了 delta 要寫進哪幾份規格。
 
-<div class="text-xs">
+<div>
 
 ```md
 ### New Capabilities
@@ -783,6 +787,8 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 -->
 
 ---
+class: code-lg
+---
 
 # 對應的 specs 結構
 
@@ -807,6 +813,8 @@ openspec/changes/2026-06-26-quiz-multiple-choice/specs/
 好處是之後你要查「quiz-result-page 現在到底該長怎樣」，你就去看那一份，不用在一堆歷史提案裡面翻。
 -->
 
+---
+class: code-lg
 ---
 
 # Delta 格式
@@ -850,7 +858,7 @@ REMOVED，移除的需求，而且要寫 Reason。這個欄位我覺得特別有
 
 每個 Requirement **至少要有一個 Scenario**，強制性用 `SHALL` 或 `MUST`。
 
-<div class="text-xs">
+<div>
 
 ```md
 ### Requirement: 複選題顯示「複選」題型標籤
@@ -891,7 +899,7 @@ REMOVED，移除的需求，而且要寫 Reason。這個欄位我覺得特別有
 
 AI 依 `tasks.md` 逐項完成，做完一項勾一項。
 
-<div class="text-xs mt-4">
+<div class="mt-4">
 
 ```md
 ## 1. GraphQL 契約與型別
@@ -918,6 +926,8 @@ AI 依 `tasks.md` 逐項完成，做完一項勾一項。
 這不是失誤，這是流程的一部分。規格不是寫完就凍結的合約，它跟程式碼一起演進。等一下第五章我會給一個很具體的例子。
 -->
 
+---
+class: code-lg
 ---
 
 # Stage 3 · archive
@@ -954,7 +964,7 @@ openspec/specs/
 
 不是每個提案都是 31 個 task。
 
-<div class="text-xs">
+<div>
 
 ```md
 ## Why
@@ -986,6 +996,8 @@ openspec/specs/
 重點是：同一套流程，從改三個下拉選單，到五十二個 task 的大功能，都撐得住。你不需要為不同規模的工作切換不同流程。
 -->
 
+---
+class: code-lg
 ---
 
 # 什麼時候不需要提案？
@@ -1151,7 +1163,7 @@ layout: center
 
 `2026-07-23-fix-stale-session-signout`——客戶 subdomain 對調後約 50 人被鎖在登入頁。
 
-<div class="text-xs mt-4">
+<div class="mt-4">
 
 ```md
 **範圍決定（PR #1544 review 後）**：原提案曾包含「登入頁切換帳號出口」。

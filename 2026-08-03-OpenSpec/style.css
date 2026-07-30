@@ -1,0 +1,18 @@
+/*
+ * 本簡報的樣式覆寫。Slidev 會自動載入與 slides.md 同層的 style.css。
+ *
+ * 為什麼需要 !important：
+ * Slidev 的基礎規則是 `.slidev-code { font-size: var(--slidev-code-font-size) !important }`，
+ * 因此包一層 `text-xs` / `text-xl` 之類的工具類對 code block 完全無效——工具類只會
+ * 影響外層 `.slidev-code-wrapper`，真正的 <pre> 仍讀自己的變數。要改字級只能同樣
+ * 用 !important 蓋過，或改寫該變數。
+ *
+ * 用法：在需要放大的投影片 frontmatter 加上 `class: code-lg`。
+ * 適用時機：教學用的短範例（指令、目錄樹、格式示意）。
+ * 不適用：proposal / spec 的真實節錄——它們行寬長，放大會橫向溢出，維持預設 12px。
+ */
+
+.code-lg .slidev-code {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}

@@ -166,8 +166,35 @@ transition: slide-left
 原則為使用程式碼區塊而非截圖。
 
 - proposal／spec 節錄以 ` ```md ` 區塊呈現，搭配 Shiki 行號高亮逐段聚焦（如 `{2-4|6-9|all}`）配合 click 分段講解
-- 每張最多約 12 行，超過則拆張或以 `<div class="text-xs">` 縮小
+- 每張最多約 12 行，超過則拆張
 - 節錄一律標明來源路徑
+
+### code block 的字級
+
+**不可用工具類調整 code block 字級。** Slidev 的基礎規則是
+`.slidev-code { font-size: var(--slidev-code-font-size) !important }`，因此在外面包
+`<div class="text-xs">`、或在 code fence 上寫 `{class:'!text-xl'}` 都**無效**——前者只影響
+外層 `.slidev-code-wrapper`，後者的 class 也是加在 wrapper 上，真正的 `<pre>` 仍讀自己的變數。
+`:deep()` 同樣無效，因為它編譯成 `[data-v-xxx] .slidev-code`，需要祖先帶 scope 屬性，
+但該屬性實際掛在 `<pre>` 本身。
+
+正確做法是簡報資料夾內的 `style.css`（Slidev 會自動載入），以同樣的 `!important` 覆寫：
+
+```css
+.code-lg .slidev-code {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}
+```
+
+需要放大的投影片在 frontmatter 加 `class: code-lg`。
+
+分界規則：
+
+| 類型 | 字級 | 適用 |
+|---|---|---|
+| **教學用短範例** | `code-lg`（1.15rem） | 指令、目錄樹、格式示意、EARS 句型 |
+| **真實 proposal／spec 節錄** | 預設（12px） | 行寬長，放大會橫向溢出 |
 
 僅兩處使用截圖：`openspec view` 的互動儀表板、`openspec validate --strict` 的輸出。這兩張需另行截圖，實作時先放 HTML 註解標記位置。
 
