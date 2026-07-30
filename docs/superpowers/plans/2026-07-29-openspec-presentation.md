@@ -1200,9 +1200,9 @@ git commit -m "feat(openspec-slides): 第 6 章 導入建議與 Superpowers 延�
 
 計畫執行完畢後，簡報即可放映。以下兩項需要講者自己動手，不在本計畫範圍：
 
-> 註：計畫執行後有兩處變動——加入「今天的路線」大綱投影片（第 2 張），以及移除「我們試過 Spec Kit」那張。兩者互相抵銷，因此以下位置與本計畫執行完的狀態相同：`# 什麼時候不需要提案？` 是第 38 張，總張數 50。
+> 註：計畫執行後有三處變動——加入「今天的路線」大綱投影片（第 2 張）、移除「我們試過 Spec Kit」那張、加入「design.md · Decisions」（第 32 張）。淨增一張，因此 `# 什麼時候不需要提案？` 現在是第 39 張，總張數 51。
 
-1. 於 `hahow-for-business-frontend` 執行 `openspec view`，截圖存為 `2026-08-03-OpenSpec/public/openspec-view.png`，並在 `# 什麼時候不需要提案？`（第 38 張）之後加一張展示
+1. 於 `hahow-for-business-frontend` 執行 `openspec view`，截圖存為 `2026-08-03-OpenSpec/public/openspec-view.png`，並在 `# 什麼時候不需要提案？`（第 39 張）之後加一張展示
 2. 執行 `openspec validate <name> --strict`，截圖存為 `2026-08-03-OpenSpec/public/openspec-validate.png`，同上加一張
 
-兩張截圖加入後總張數為 52。
+兩張截圖加入後總張數為 53。

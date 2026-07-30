@@ -46,7 +46,7 @@
 
 **主例 — `2026-06-26-quiz-multiple-choice`**（第 4 章）
 
-31 個 task、3 份 spec、提案＋設計約 1.3 萬字。一個 change 同時 `ADDED quiz-question-editor`、`MODIFIED quiz-taking-page`、`MODIFIED quiz-result-page`，可一次示範 Delta 格式、多 capability 拆分與 `specs/` 子目錄結構。
+31 個 task、3 份 spec、提案＋設計約 1.3 萬字。一個 change 同時 `ADDED quiz-question-editor`、`MODIFIED quiz-taking-page`、`MODIFIED quiz-result-page`，可一次示範 Delta 格式、多 capability 拆分與 `specs/` 子目錄結構；其 design.md 的 D1 也是決策紀錄（理由／替代方案／影響）最標準的形狀。
 
 **對照 — `2026-06-11-align-auto-detection-filter-labels`**（第 4 章結尾）
 
@@ -62,7 +62,7 @@
 
 ## 投影片大綱
 
-內容 44 張，另加六章各一張章節過場，總計 50 張。
+內容 45 張，另加六章各一張章節過場，總計 51 張。
 
 ### 開場前（2 張）
 
@@ -97,7 +97,7 @@
 20. Greenfield vs Brownfield——我們是後者
 21. OpenSpec 的取捨：純 Markdown、無 API key、支援多種 AI 工具、`specs` 與 `changes` 分離
 
-### 第 4 章 — 實戰：三個指令（13 張）
+### 第 4 章 — 實戰：三個指令（14 張）
 
 22. 安裝與初始化＋目錄結構（`specs`／`changes`／`archive`）
 23. 三階段流程圖：proposal → apply → archive
@@ -105,29 +105,30 @@
 25. `quiz-multiple-choice` 的 Why（真實節錄）
 26. 同一份的 What Changes（真實節錄）
 27. Capabilities 段：ADDED 一項＋MODIFIED 兩項
-28. 對應的 `specs/` 子目錄結構
-29. Delta 格式：`## ADDED`／`## MODIFIED`／`## REMOVED`（REMOVED 須寫 Reason）
-30. Scenario 寫法：`WHEN / THEN / AND` 搭配 `SHALL`／`MUST`，每個 Requirement 至少一個 Scenario
-31. Stage 2 apply：tasks.md 逐項打勾（真實節錄）
-32. Stage 3 archive：變更合併回 `openspec/specs/`
-33. 另一個極端：`align-auto-detection-filter-labels`，7 個 task／1 份 spec／純文案調整
-34. 什麼情況不需要提案＋常用指令（`list`／`validate --strict`／`show`／`view`）
+28. design.md 的 Decisions：以 `quiz-multiple-choice` 的 D1 示範決策紀錄的三個欄位（理由／替代方案／影響）
+29. 對應的 `specs/` 子目錄結構
+30. Delta 格式：`## ADDED`／`## MODIFIED`／`## REMOVED`（REMOVED 須寫 Reason）
+31. Scenario 寫法：`WHEN / THEN / AND` 搭配 `SHALL`／`MUST`，每個 Requirement 至少一個 Scenario
+32. Stage 2 apply：tasks.md 逐項打勾（真實節錄）
+33. Stage 3 archive：變更合併回 `openspec/specs/`
+34. 另一個極端：`align-auto-detection-filter-labels`，7 個 task／1 份 spec／純文案調整
+35. 什麼情況不需要提案＋常用指令（`list`／`validate --strict`／`show`／`view`）
 
 ### 第 5 章 — 現實：spec 不是銀彈（5 張）
 
-35. 同一份 spec 跑三次，功能相同但結構不同——LLM 的非確定性
-36. 自然語言的曖昧：「點擊按鈕顯示對話框」背後七個沒回答的問題
-37. 虛假的控制感：MDD 的前車之鑑、`Verschlimmbesserung`
-38. 轉折：真正的價值不是控制 AI，是留下決策脈絡
-39. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
+36. 同一份 spec 跑三次，功能相同但結構不同——LLM 的非確定性
+37. 自然語言的曖昧：「點擊按鈕顯示對話框」背後七個沒回答的問題
+38. 虛假的控制感：MDD 的前車之鑑、`Verschlimmbesserung`
+39. 轉折：真正的價值不是控制 AI，是留下決策脈絡
+40. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
 
 ### 第 6 章 — 怎麼開始（5 張）
 
-40. 導入建議：從下一個新功能開始，不要回頭補 spec
-41. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
-42. Superpowers：規格解決 what，紀律解決 how
-43. Superpowers 的取捨（成本高、依賴 AI 自律）＋結語：「下次 AI 說完成了，反問——完成了什麼？」
-44. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
+41. 導入建議：從下一個新功能開始，不要回頭補 spec
+42. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
+43. Superpowers：規格解決 what，紀律解決 how
+44. Superpowers 的取捨（成本高、依賴 AI 自律）＋結語：「下次 AI 說完成了，反問——完成了什麼？」
+45. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
 
 ## 視覺與技術規格
 
@@ -157,8 +158,8 @@ transition: slide-left
 - 章節分隔用 `layout: section`，六章各一張過場
 - 概念金句用 `layout: center` 搭配大字
 - 比較表用原生 Markdown table 搭配 `text-sm`
-- 流程圖（第 8、23 張）用 Mermaid，Slidev 原生支援
-- 目錄結構（第 22、28 張）用 ` ```plain ` 區塊
+- 流程圖（內容第 9、23 張）用 Mermaid，Slidev 原生支援
+- 目錄結構（內容第 22、29 張）用 ` ```plain ` 區塊
 
 ### 真實節錄的呈現
 
@@ -217,7 +218,7 @@ frontmatter 後 HMR 可能不同步，量測前務必硬重載，否則讀到的
 
 ## References
 
-簡報最後一張（第 44 張）需列出以下來源：
+簡報最後一張（第 45 張）需列出以下來源：
 
 - 高見龍，[SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
 - 高見龍，[OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)

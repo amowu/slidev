@@ -691,6 +691,8 @@ class: code-md
 <div>
 
 ```md
+## What Changes
+
 - **Admin 題目編輯**：解除封印「＋ 複選題」新增按鈕與每道題目的
   「題目類型」Select（單選 ↔︎ 複選）；複選題以 Checkbox 標示多個正確答案、
   單選題維持 Radio（現有行為）。
@@ -753,6 +755,41 @@ class: code-md
 這個 change 新增了一個 quiz-question-editor，同時修改了 quiz-taking-page 跟 quiz-result-page 兩個既有能力。
 
 寫這一段的時候，你就被迫去想「我碰到的東西還有誰在用」。這正是 brownfield 最容易出事的地方——你改了 A，但忘記 B 也依賴同一個行為。
+-->
+
+---
+class: code-md
+---
+
+# design.md · Decisions
+
+每個決策記三件事：**理由**、**替代方案**、**影響**。
+
+```md
+### D1. 學員端作答狀態統一正規化為 `string[]`
+
+Redux QuizState.responses 由 { [key: string]: string } 改為
+{ [key: string]: string[] }，單選題以單元素陣列表示。
+
+- **理由**：避免 string | string[] 聯集型別在 Question／submit／結果頁
+  四處各自做型別分支；統一陣列後送出端 choiceIds 直接對應。
+- **替代方案**：保留 string | string[] 聯集——被否決，會在每個消費點
+  散落 Array.isArray 判斷，且已答題數的增減邏輯更易出錯。
+- **影響**：quiz.type.ts、quiz.slice.ts、Question.tsx、QuizResult.tsx
+```
+
+<!--
+第三份產物是 design.md，記技術決策。
+
+這一段是 D1，格式很值得看：理由、替代方案、影響，三件事。
+
+我想特別講「替代方案」這一欄。這裡寫的是「保留聯集型別——被否決」，還寫了為什麼否決。
+
+平常我們做這種決定，想過的另一條路就這樣消失了。三個月後有人看到這段程式碼，覺得「用聯集型別不是更簡單嗎」，然後改回去，再踩一次同一個坑。
+
+寫下被否決的方案跟否決的理由，就是在防這件事。
+
+至於 tasks.md，我等一下講 apply 的時候會直接看它。
 -->
 
 ---
