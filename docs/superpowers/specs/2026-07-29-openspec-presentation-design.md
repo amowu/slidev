@@ -62,69 +62,73 @@
 
 ## 投影片大綱
 
-內容 44 張，另加六章各一張章節過場，總計 50 張。
+內容 45 張，另加六章各一張章節過場，總計 51 張。
 
-### 第 1 章 — 開場（5 張）
+### 開場前（2 張）
 
 1. 封面：標題、講者、日期
-2. 場景大字：「我做完了」
-3. Vibe Coding 的甜蜜：POC 驗證、小工具、技術探索
-4. Vibe Coding 的危險：風格不一致／漏掉沒說的需求／自信地宣稱完成
-5. 轉折：問題不在 AI 不夠強，在於沒人定義過什麼叫「完成」
+2. 今天的路線：六章標題與各章時間預算，並預告第 5 章談限制
+
+### 第 1 章 — 開場（4 張）
+
+3. 場景大字：「我做完了」
+4. Vibe Coding 的甜蜜：POC 驗證、小工具、技術探索
+5. Vibe Coding 的危險：風格不一致／漏掉沒說的需求／自信地宣稱完成
+6. 轉折：問題不在 AI 不夠強，在於沒人定義過什麼叫「完成」
 
 ### 第 2 章 — SDD 是什麼（12 張）
 
-6. SDD 不是新發明——瀑布、TDD、BDD 的延續
-7. 核心定位：成為 AI 與人的共同語言
-8. 三階段總覽圖：Requirements → Design → Tasks
-9. Requirements：使用者故事＋驗收標準（登入範例）
-10. Design：架構、資料流、錯誤處理、測試策略——在寫程式前發現問題
-11. Tasks：可追蹤、可驗收、能追溯回需求編號
-12. EARS 的來歷：2009 年 Alistair Mavin 與 Rolls-Royce 團隊，Airbus／NASA／Siemens 採用
-13. EARS 格式：`WHEN … THEN … SHALL`
-14. EARS 的三個好處：強迫明確、易轉測試、壓縮 AI 猜測空間
-15. 三個層級總覽
-16. Spec-first／Spec-anchored／Spec-as-source 各自的樣貌
-17. 定位：本場談的是第二層 Spec-anchored——spec 進版控、隨專案演進
+7. SDD 不是新發明——瀑布、TDD、BDD 的延續
+8. 核心定位：成為 AI 與人的共同語言
+9. 三階段總覽圖：Requirements → Design → Tasks
+10. Requirements：使用者故事＋驗收標準（登入範例）
+11. Design：架構、資料流、錯誤處理、測試策略——在寫程式前發現問題
+12. Tasks：可追蹤、可驗收、能追溯回需求編號
+13. EARS 的來歷：2009 年 Alistair Mavin 與 Rolls-Royce 團隊，Airbus／NASA／Siemens 採用
+14. EARS 格式：`WHEN … THEN … SHALL`
+15. EARS 的三個好處：強迫明確、易轉測試、壓縮 AI 猜測空間
+16. 三個層級總覽
+17. Spec-first／Spec-anchored／Spec-as-source 各自的樣貌
+18. 定位：本場談的是第二層 Spec-anchored——spec 進版控、隨專案演進
 
 ### 第 3 章 — 為什麼是 OpenSpec（4 張）
 
-18. 四個工具比較表：Kiro／Spec Kit／Tessl／OpenSpec
-19. Greenfield vs Brownfield——我們是後者
-20. OpenSpec 的取捨：純 Markdown、無 API key、支援多種 AI 工具、`specs` 與 `changes` 分離
-21. 我們試過 Spec Kit（`specs/001-time-basis-filter/` 只留下一個 feature）
+19. 四個工具比較表：Kiro／Spec Kit／Tessl／OpenSpec
+20. Greenfield vs Brownfield——我們是後者
+21. OpenSpec 的取捨：純 Markdown、無 API key、支援多種 AI 工具、`specs` 與 `changes` 分離
+22. 我們試過 Spec Kit（`specs/001-time-basis-filter/` 只留下一個 feature）
 
 ### 第 4 章 — 實戰：三個指令（13 張）
 
-22. 安裝與初始化＋目錄結構（`specs`／`changes`／`archive`）
-23. 三階段流程圖：proposal → apply → archive
-24. Stage 1 proposal：指令與產物清單
-25. `quiz-multiple-choice` 的 Why（真實節錄）
-26. 同一份的 What Changes（真實節錄）
-27. Capabilities 段：ADDED 一項＋MODIFIED 兩項
-28. 對應的 `specs/` 子目錄結構
-29. Delta 格式：`## ADDED`／`## MODIFIED`／`## REMOVED`（REMOVED 須寫 Reason）
-30. Scenario 寫法：`WHEN / THEN / AND` 搭配 `SHALL`／`MUST`，每個 Requirement 至少一個 Scenario
-31. Stage 2 apply：tasks.md 逐項打勾（真實節錄）
-32. Stage 3 archive：變更合併回 `openspec/specs/`
-33. 另一個極端：`align-auto-detection-filter-labels`，7 個 task／1 份 spec／純文案調整
-34. 什麼情況不需要提案＋常用指令（`list`／`validate --strict`／`show`／`view`）
+23. 安裝與初始化＋目錄結構（`specs`／`changes`／`archive`）
+24. 三階段流程圖：proposal → apply → archive
+25. Stage 1 proposal：指令與產物清單
+26. `quiz-multiple-choice` 的 Why（真實節錄）
+27. 同一份的 What Changes（真實節錄）
+28. Capabilities 段：ADDED 一項＋MODIFIED 兩項
+29. 對應的 `specs/` 子目錄結構
+30. Delta 格式：`## ADDED`／`## MODIFIED`／`## REMOVED`（REMOVED 須寫 Reason）
+31. Scenario 寫法：`WHEN / THEN / AND` 搭配 `SHALL`／`MUST`，每個 Requirement 至少一個 Scenario
+32. Stage 2 apply：tasks.md 逐項打勾（真實節錄）
+33. Stage 3 archive：變更合併回 `openspec/specs/`
+34. 另一個極端：`align-auto-detection-filter-labels`，7 個 task／1 份 spec／純文案調整
+35. 什麼情況不需要提案＋常用指令（`list`／`validate --strict`／`show`／`view`）
 
 ### 第 5 章 — 現實：spec 不是銀彈（5 張）
 
-35. 同一份 spec 跑三次，功能相同但結構不同——LLM 的非確定性
-36. 自然語言的曖昧：「點擊按鈕顯示對話框」背後七個沒回答的問題
-37. 虛假的控制感：MDD 的前車之鑑、`Verschlimmbesserung`
-38. 轉折：真正的價值不是控制 AI，是留下決策脈絡
-39. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
+36. 同一份 spec 跑三次，功能相同但結構不同——LLM 的非確定性
+37. 自然語言的曖昧：「點擊按鈕顯示對話框」背後七個沒回答的問題
+38. 虛假的控制感：MDD 的前車之鑑、`Verschlimmbesserung`
+39. 轉折：真正的價值不是控制 AI，是留下決策脈絡
+40. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
 
 ### 第 6 章 — 怎麼開始（5 張）
 
-40. 導入建議：從下一個新功能開始，不要回頭補 spec
-41. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
-42. Superpowers：規格解決 what，紀律解決 how
-43. Superpowers 的取捨（成本高、依賴 AI 自律）＋結語：「下次 AI 說完成了，反問——完成了什麼？」
-44. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
+41. 導入建議：從下一個新功能開始，不要回頭補 spec
+42. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
+43. Superpowers：規格解決 what，紀律解決 how
+44. Superpowers 的取捨（成本高、依賴 AI 自律）＋結語：「下次 AI 說完成了，反問——完成了什麼？」
+45. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
 
 ## 視覺與技術規格
 
@@ -185,7 +189,7 @@ transition: slide-left
 
 ## References
 
-簡報最後一張（第 44 張）需列出以下來源：
+簡報最後一張（第 45 張）需列出以下來源：
 
 - 高見龍，[SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
 - 高見龍，[OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
