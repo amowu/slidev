@@ -758,41 +758,6 @@ class: code-md
 -->
 
 ---
-class: code-md
----
-
-# design.md · Decisions
-
-每個決策記三件事：**理由**、**替代方案**、**影響**。
-
-```md
-### D1. 學員端作答狀態統一正規化為 `string[]`
-
-Redux QuizState.responses 由 { [key: string]: string } 改為
-{ [key: string]: string[] }，單選題以單元素陣列表示。
-
-- **理由**：避免 string | string[] 聯集型別在 Question／submit／結果頁
-  四處各自做型別分支；統一陣列後送出端 choiceIds 直接對應。
-- **替代方案**：保留 string | string[] 聯集——被否決，會在每個消費點
-  散落 Array.isArray 判斷，且已答題數的增減邏輯更易出錯。
-- **影響**：quiz.type.ts、quiz.slice.ts、Question.tsx、QuizResult.tsx
-```
-
-<!--
-第三份產物是 design.md，記技術決策。
-
-這一段是 D1，格式很值得看：理由、替代方案、影響，三件事。
-
-我想特別講「替代方案」這一欄。這裡寫的是「保留聯集型別——被否決」，還寫了為什麼否決。
-
-平常我們做這種決定，想過的另一條路就這樣消失了。三個月後有人看到這段程式碼，覺得「用聯集型別不是更簡單嗎」，然後改回去，再踩一次同一個坑。
-
-寫下被否決的方案跟否決的理由，就是在防這件事。
-
-至於 tasks.md，我等一下講 apply 的時候會直接看它。
--->
-
----
 class: code-lg
 ---
 
@@ -895,6 +860,43 @@ class: code-md
 注意這裡還有 SHALL NOT：「單選題不顯示題型標籤」。把「不該發生什麼」也寫出來，這是很多人會漏掉的。
 
 另外看 Scenario 標題後面括號裡的 AC-EXAM-03，那是 PRD 的驗收條件編號。這樣規格就可以直接追溯回需求，PM 來問的時候你講得出對應關係。
+-->
+
+---
+class: code-md
+---
+
+# design.md · Decisions
+
+每個決策記三件事：**理由**、**替代方案**、**影響**。
+
+```md
+### D1. 學員端作答狀態統一正規化為 `string[]`
+
+Redux QuizState.responses 由 { [key: string]: string } 改為
+{ [key: string]: string[] }，單選題以單元素陣列表示。
+
+- **理由**：避免 string | string[] 聯集型別在 Question／submit／結果頁
+  四處各自做型別分支；統一陣列後送出端 choiceIds 直接對應。
+- **替代方案**：保留 string | string[] 聯集——被否決，會在每個消費點
+  散落 Array.isArray 判斷，且已答題數的增減邏輯更易出錯。
+- **影響**：quiz.type.ts、quiz.slice.ts、Question.tsx、QuizResult.tsx
+```
+
+<!--
+規格看完了，動手之前還有一份：design.md，記技術決策。
+
+它的位置就在這裡——規格說「系統要變成什麼樣」，design.md 說「我們打算怎麼做到、以及為什麼不用另一種做法」。這是 apply 之前的最後一道關卡。
+
+這一段是 D1，格式很值得看：理由、替代方案、影響，三件事。
+
+我想特別講「替代方案」這一欄。這裡寫的是「保留聯集型別——被否決」，還寫了為什麼否決。
+
+平常我們做這種決定，想過的另一條路就這樣消失了。三個月後有人看到這段程式碼，覺得「用聯集型別不是更簡單嗎」，然後改回去，再踩一次同一個坑。
+
+寫下被否決的方案跟否決的理由，就是在防這件事。
+
+四份產物還剩 tasks.md，它跟 apply 綁在一起，接下來一起看。
 -->
 
 ---

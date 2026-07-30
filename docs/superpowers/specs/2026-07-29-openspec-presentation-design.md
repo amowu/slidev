@@ -105,10 +105,10 @@
 25. `quiz-multiple-choice` 的 Why（真實節錄）
 26. 同一份的 What Changes（真實節錄）
 27. Capabilities 段：ADDED 一項＋MODIFIED 兩項
-28. design.md 的 Decisions：以 `quiz-multiple-choice` 的 D1 示範決策紀錄的三個欄位（理由／替代方案／影響）
-29. 對應的 `specs/` 子目錄結構
-30. Delta 格式：`## ADDED`／`## MODIFIED`／`## REMOVED`（REMOVED 須寫 Reason）
-31. Scenario 寫法：`WHEN / THEN / AND` 搭配 `SHALL`／`MUST`，每個 Requirement 至少一個 Scenario
+28. 對應的 `specs/` 子目錄結構
+29. Delta 格式：`## ADDED`／`## MODIFIED`／`## REMOVED`（REMOVED 須寫 Reason）
+30. Scenario 寫法：`WHEN / THEN / AND` 搭配 `SHALL`／`MUST`，每個 Requirement 至少一個 Scenario
+31. design.md 的 Decisions：以 `quiz-multiple-choice` 的 D1 示範決策紀錄的三個欄位（理由／替代方案／影響）。置於規格之後、apply 之前——規格說「系統要變成什麼樣」，design.md 說「打算怎麼做到、為什麼不用另一種做法」，是動手前的最後一關
 32. Stage 2 apply：tasks.md 逐項打勾（真實節錄）
 33. Stage 3 archive：變更合併回 `openspec/specs/`
 34. 另一個極端：`align-auto-detection-filter-labels`，7 個 task／1 份 spec／純文案調整
@@ -159,7 +159,7 @@ transition: slide-left
 - 概念金句用 `layout: center` 搭配大字
 - 比較表用原生 Markdown table 搭配 `text-sm`
 - 流程圖（內容第 9、23 張）用 Mermaid，Slidev 原生支援
-- 目錄結構（內容第 22、29 張）用 ` ```plain ` 區塊
+- 目錄結構（內容第 22、28 張）用 ` ```plain ` 區塊
 
 ### 真實節錄的呈現
 
