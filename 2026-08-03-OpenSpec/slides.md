@@ -552,41 +552,6 @@ OpenSpec 的四個取捨，剛好都打在我們的需求上。
 -->
 
 ---
-class: code-lg
----
-
-# 我們試過 Spec Kit
-
-`specs/001-time-basis-filter/` 還留在 repo 裡——只有這一個 feature。
-
-```plain
-specs/001-time-basis-filter/
-├── checklists/requirements.md
-├── data-model.md
-├── plan.md
-├── research.md
-├── spec.md
-└── tasks.md
-```
-
-<div class="mt-6 text-gray-400">
-  六份文件、一次功能。流程完整，但對「改既有系統」這件事幫助有限——
-  它沒有回答「現在的系統長怎樣」。
-</div>
-
-<!--
-這裡誠實補一件事：我們不是一開始就選 OpenSpec。
-
-我們先試過 Spec Kit。你們現在去 repo 裡看，specs 資料夾底下還留著 001-time-basis-filter，六份文件——research、plan、data-model、spec、tasks，還有 checklist。
-
-流程本身很完整，做出來的東西也不差。但你注意，編號停在 001，只有這一個 feature。
-
-原因是它沒有回答我們最需要的那個問題：現在的系統長怎樣。每次做新功能都是從零開始描述一次上下文，沒有累積。
-
-這就是我們換到 OpenSpec 的原因。
--->
-
----
 layout: section
 ---
 
@@ -648,7 +613,7 @@ flowchart LR
 
 propose，草擬提案。apply，實作。archive，歸檔。
 
-注意最後那條虛線——archive 的時候，這次變更的規格差異會被合併回 openspec/specs，成為系統的新現況。這就是「累積」發生的地方，也是 Spec Kit 沒有的那一塊。
+注意最後那條虛線——archive 的時候，這次變更的規格差異會被合併回 openspec/specs，成為系統的新現況。這就是「累積」發生的地方；前面那張表裡定位在 Spec-first 的工具，少的就是這一步。
 
 另外還有一個 explore，在動手之前先摸清既有實作長怎樣，做 brownfield 的時候滿好用的。
 -->
