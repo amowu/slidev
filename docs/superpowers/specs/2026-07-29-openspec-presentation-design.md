@@ -19,7 +19,7 @@
 | [SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development) | 概念底盤：三階段、EARS、三個層級、工具比較 |
 | [OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec) | 主體：proposal → apply → archive、Delta 格式 |
 | [Spec-as-source 的理想與現實](https://kaochenlong.com/sdd-spec-as-source) | 限制與反思：非確定性、虛假控制感、spec 作為活文件 |
-| [給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills) | 原規劃為結尾延伸 2–3 張，後經決定不納入講述內容，僅保留於 References 供延伸閱讀 |
+| [給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills) | 第 6 章結尾延伸，1 張（僅介紹，不談取捨） |
 
 實例一律取自 `/Users/amowu/Documents/Hahow/hahow-for-business-frontend` 的真實 change 紀錄，不使用虛構範例。該 repo 自 2026-05-27 起使用 OpenSpec，至 2026-07-29 已累積 16 個 change（`openspec/changes/archive/` 內 11 個，其餘散於 feature branch）與 14 份正式 spec，並使用 `/opsx:propose`、`/opsx:explore`、`/opsx:apply`、`/opsx:archive` 指令。
 
@@ -36,7 +36,7 @@
 | 3 | 工具地景：為什麼是 OpenSpec | 3 min | Brownfield-first、純 Markdown、無 API key |
 | 4 | OpenSpec 實戰：三個指令 | 8 min | proposal → apply → archive |
 | 5 | 現實：spec 不是銀彈 | 3 min | 真正的價值是留下決策脈絡 |
-| 6 | 怎麼開始 | 1 min | 從下一個新功能開始，別回頭補 spec |
+| 6 | 怎麼開始 | 2 min | 從下一個新功能開始，別回頭補 spec |
 | 7 | 總結 | 1 min | 五句話收束，回到開場的「完成了什麼？」 |
 
 ## 案例配置
@@ -63,7 +63,7 @@
 
 ## 投影片大綱
 
-內容 44 張，另加七章各一張章節過場，總計 51 張。
+內容 45 張，另加七章各一張章節過場，總計 52 張。
 
 ### 開場前（2 張）
 
@@ -123,15 +123,16 @@
 39. 轉折：真正的價值不是控制 AI，是留下決策脈絡
 40. `fix-stale-session-signout` 的兩段真實紀錄（見上節）
 
-### 第 6 章 — 怎麼開始（2 張）
+### 第 6 章 — 怎麼開始（3 張）
 
 41. 導入建議：從下一個新功能開始，不要回頭補 spec
 42. 三個月的數字：16 個 change、14 份 spec、單一 change 規模從 7 個 task 到 52 個 task
+43. 延伸：Superpowers——規格解決 what，紀律解決 how。只介紹四個代表性 Skills，不談取捨（原「Superpowers 的取捨」那張已移除）
 
 ### 第 7 章 — 總結（2 張）
 
-43. 五句話：問題不在 AI 不夠強／SDD 就是先定義完成／OpenSpec 適合我們／但它不是銀彈／真正的收穫是脈絡。結語回到開場：「下次 AI 說完成了，反問——完成了什麼？」
-44. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
+44. 五句話：問題不在 AI 不夠強／SDD 就是先定義完成／OpenSpec 適合我們／但它不是銀彈／真正的收穫是脈絡。結語回到開場：「下次 AI 說完成了，反問——完成了什麼？」
+45. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
 
 ## 視覺與技術規格
 
@@ -221,7 +222,7 @@ frontmatter 後 HMR 可能不同步，量測前務必硬重載，否則讀到的
 
 ## References
 
-簡報最後一張（第 44 張）需列出以下來源：
+簡報最後一張（第 45 張）需列出以下來源：
 
 - 高見龍，[SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
 - 高見龍，[OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
