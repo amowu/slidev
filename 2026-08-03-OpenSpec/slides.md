@@ -1359,24 +1359,15 @@ layout: section
 -->
 
 ---
-layout: center
----
 
 # References
 
-<div class="text-sm text-left">
-
-- 高見龍，[SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
-- 高見龍，[OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
-- 高見龍，[Spec-as-source 的理想與現實](https://kaochenlong.com/sdd-spec-as-source)
-- 高見龍，[給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills)
-
-<br>
-
-- [OpenSpec](https://github.com/Fission-AI/OpenSpec) · `@fission-ai/openspec`
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec)
 - [Superpowers](https://github.com/obra/superpowers)
-
-</div>
+- [SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
+- [OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
+- [Spec-as-source 的理想與現實](https://kaochenlong.com/sdd-spec-as-source)
+- [給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills)
 
 <!--
 今天的內容主要整理自高見龍這四篇文章，非常推薦大家自己讀一遍，寫得比我講得完整。

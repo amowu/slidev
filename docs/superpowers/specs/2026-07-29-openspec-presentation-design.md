@@ -132,7 +132,7 @@
 ### 第 7 章 — 總結（2 張）
 
 44. 五句話：問題不在 AI 不夠強／SDD 就是先定義完成／OpenSpec 適合我們／但它不是銀彈／真正的收穫是脈絡。結語回到開場：「下次 AI 說完成了，反問——完成了什麼？」
-45. References：四篇文章的標題與連結（見文末 References 一節），以 `layout: center` 呈現，文字 `text-sm`
+45. References：兩個工具 repo 與四篇文章的連結（見文末 References 一節）。單一扁平清單、預設 layout，不加 `高見龍，` 前綴
 
 ## 視覺與技術規格
 
@@ -232,14 +232,13 @@ frontmatter 後 HMR 可能不同步，量測前務必硬重載，否則讀到的
 
 ## References
 
-簡報最後一張（第 45 張）需列出以下來源：
+簡報最後一張（第 45 張）需列出以下來源，工具在前、文章在後，單一清單：
 
-- 高見龍，[SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
-- 高見龍，[OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
-- 高見龍，[Spec-as-source 的理想與現實](https://kaochenlong.com/sdd-spec-as-source)
-- 高見龍，[給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills)
-
-另附工具官方連結：
-
-- [OpenSpec](https://github.com/Fission-AI/OpenSpec)（`@fission-ai/openspec`）
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec)
 - [Superpowers](https://github.com/obra/superpowers)
+- [SDD 規格驅動開發](https://kaochenlong.com/sdd-spec-driven-development)
+- [OpenSpec 讓 SDD 變簡單的三個指令](https://kaochenlong.com/openspec)
+- [Spec-as-source 的理想與現實](https://kaochenlong.com/sdd-spec-as-source)
+- [給 AI 超能力？Superpowers 的設計與取捨](https://kaochenlong.com/ai-superpowers-skills)
+
+四篇文章皆為高見龍所著，投影片上不逐條加署名，由講者口頭說明。
