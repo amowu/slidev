@@ -180,20 +180,22 @@ transition: slide-left
 正確做法是簡報資料夾內的 `style.css`（Slidev 會自動載入），以同樣的 `!important` 覆寫：
 
 ```css
-.code-lg .slidev-code {
-  font-size: 1.15rem !important;
-  line-height: 1.7 !important;
-}
+.code-lg .slidev-code { font-size: 1.15rem !important; line-height: 1.7 !important; }
+.code-md .slidev-code { font-size: 1rem !important;    line-height: 1.65 !important; }
 ```
 
-需要放大的投影片在 frontmatter 加 `class: code-lg`。
+投影片在 frontmatter 加 `class: code-lg` 或 `class: code-md`。分兩級：
 
-分界規則：
-
-| 類型 | 字級 | 適用 |
+| 類型 | 字級 | 上限由什麼決定 |
 |---|---|---|
-| **教學用短範例** | `code-lg`（1.15rem） | 指令、目錄樹、格式示意、EARS 句型 |
-| **真實 proposal／spec 節錄** | 預設（12px） | 行寬長，放大會橫向溢出 |
+| **教學用短範例**（指令、目錄樹、格式示意） | `code-lg`（1.15rem） | 垂直空間，目前遠未觸及 |
+| **真實 proposal／spec 節錄** | `code-md`（1rem） | 橫向溢出——中文行寬三、四十字，1rem 是實測全部不溢出的上限 |
+
+Slidev 預設的 12px 對投影片而言太小，全部 code block 都應歸入上述兩級之一。
+
+驗證方式：以 DevTools 掃全部投影片，比較每個 `.slidev-code` 的 `scrollWidth - clientWidth`
+與所在 `.slidev-layout` 的 `scrollHeight - clientHeight`，兩者皆須為 0。**注意**：改完
+frontmatter 後 HMR 可能不同步，量測前務必硬重載，否則讀到的是舊 DOM。
 
 僅兩處使用截圖：`openspec view` 的互動儀表板、`openspec validate --strict` 的輸出。這兩張需另行截圖，實作時先放 HTML 註解標記位置。
 

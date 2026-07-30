@@ -649,6 +649,8 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 -->
 
 ---
+class: code-md
+---
 
 # proposal.md · Why
 
@@ -680,6 +682,8 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 這一句就是典型的 brownfield 上下文。這件事沒有寫在任何 PRD 裡，只有摸過這塊程式碼的人才知道。把它寫進 Why，接手的人跟 AI 才知道這次不是從零開發，而是解除封印。
 -->
 
+---
+class: code-md
 ---
 
 # proposal.md · What Changes
@@ -717,6 +721,8 @@ proposal.md 講為什麼做、改什麼、影響什麼。design.md 是技術決�
 寫下不做什麼，跟寫下要做什麼一樣重要。
 -->
 
+---
+class: code-md
 ---
 
 # proposal.md · Capabilities
@@ -816,6 +822,8 @@ REMOVED，移除的需求，而且要寫 Reason。這個欄位我覺得特別有
 -->
 
 ---
+class: code-md
+---
 
 # Scenario 的寫法
 
@@ -852,6 +860,8 @@ REMOVED，移除的需求，而且要寫 Reason。這個欄位我覺得特別有
 另外看 Scenario 標題後面括號裡的 AC-EXAM-03，那是 PRD 的驗收條件編號。這樣規格就可以直接追溯回需求，PM 來問的時候你講得出對應關係。
 -->
 
+---
+class: code-md
 ---
 
 # Stage 2 · apply
@@ -921,6 +931,8 @@ openspec/specs/
 這一步就是「累積」發生的地方。你每做完一個 change，specs 就更完整一點。三個月之後，我們的 specs 裡面已經有十四份正式規格，而這些不是我們額外花時間寫的文件，是做功能的副產品。
 -->
 
+---
+class: code-md
 ---
 
 # 另一個極端
@@ -1120,6 +1132,8 @@ layout: center
 下一張我給大家看一個很具體的例子。
 -->
 
+---
+class: code-md
 ---
 
 # 一個真實的例子

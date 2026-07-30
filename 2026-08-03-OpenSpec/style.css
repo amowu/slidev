@@ -12,9 +12,20 @@
  * 不適用：proposal / spec 的真實節錄——它們行寬長，放大會橫向溢出，維持預設 12px。
  */
 
+/* 教學用短範例：指令、目錄樹、格式示意 */
 .code-lg .slidev-code {
   font-size: 1.15rem !important;
   line-height: 1.7 !important;
+}
+
+/*
+ * 真實 proposal / spec 節錄。這些節錄的中文行寬長（一行三、四十字），
+ * 放大的上限由「會不會橫向溢出」決定，而不是垂直空間。1rem 是實測後
+ * 全部七張都不溢出的最大值。
+ */
+.code-md .slidev-code {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
 }
 
 /*
