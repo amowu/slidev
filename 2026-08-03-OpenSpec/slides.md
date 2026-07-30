@@ -1197,7 +1197,8 @@ sign_out 是重設 session 並回一個新的空 session cookie。驗收應以�
 </div>
 
 <div class="mt-4 text-gray-400 text-sm">
-  上：proposal.md 記下砍掉一半範圍的理由。<br>下：design.md 記下踩過才知道的驗收陷阱。
+  上：proposal.md 記下砍掉一半範圍的理由。<br>
+  下：design.md 記下踩過才知道的驗收陷阱。<br>
   沒有這兩段，下一個人只會看到一個「為什麼只改了這麼一點」的 PR。
 </div>
 
