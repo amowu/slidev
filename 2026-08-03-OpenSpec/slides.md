@@ -261,6 +261,14 @@ Requirements，要做什麼。Design，怎麼做。Tasks，拆成幾步。
   重點不是「使用者故事」這個格式，而是驗收標準——沒有它，「完成」就沒有定義。
 </div>
 
+<style>
+/* 本張的節錄很短，放大到接近正文字級，讓後排也看得清楚 */
+.slidev-code {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}
+</style>
+
 <!--
 第一階段，Requirements。寫下要做什麼，以及——這個更重要——怎樣算做到了。
 
