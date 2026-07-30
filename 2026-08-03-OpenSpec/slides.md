@@ -344,19 +344,17 @@ class: code-lg
 -->
 
 ---
-class: code-lg
----
 
 # EARS 的句型
 
-```text
-WHEN   the user enters correct email and password
-THEN   the system SHALL redirect the user to the home page
-```
+<div class="ears">
+  <div><span class="ears-cond">WHEN</span>   the user enters correct email and password</div>
+  <div><span class="ears-cond">THEN</span>   the system <span class="ears-must">SHALL</span> redirect the user to the home page</div>
+</div>
 
 <div class="mt-8">
 
-`WHEN` 描述觸發條件，`THEN` 描述系統必須做的事，`SHALL` 表示這是強制要求。
+<span class="ears-cond font-mono">WHEN</span> 描述觸發條件，<span class="ears-cond font-mono">THEN</span> 描述系統必須做的事，<span class="ears-must font-mono">SHALL</span> 表示這是強制要求。
 
 </div>
 

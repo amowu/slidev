@@ -16,3 +16,43 @@
   font-size: 1.15rem !important;
   line-height: 1.7 !important;
 }
+
+/*
+ * 「EARS 的句型」那張的關鍵字上色。
+ *
+ * 為什麼不用 code block：` ```text ` 沒有語法規則，Shiki 不會上色；改用會上色的
+ * language（例如 gherkin）則需要 Feature/Scenario 的上下文，而且 SHALL 仍然不是
+ * 它的關鍵字。因此改為手寫 markup，逐字上色。
+ *
+ * 配色沿用 deck 裡 Shiki 的 vitesse-light / vitesse-dark，讓它與其他 code block
+ * 看起來是同一套系統。Slidev 深色模式會在 html 掛上 .dark。
+ */
+
+.ears {
+  font-family: var(--slidev-code-font-family);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  white-space: pre;
+  background: var(--slidev-code-background);
+  padding: var(--slidev-code-padding);
+  border-radius: var(--slidev-code-radius, 6px);
+  overflow-x: auto;
+}
+
+.ears-cond {
+  color: #1c6b48;
+  font-weight: 600;
+}
+
+.ears-must {
+  color: #ab5959;
+  font-weight: 600;
+}
+
+html.dark .ears-cond {
+  color: #4d9375;
+}
+
+html.dark .ears-must {
+  color: #cb7676;
+}
