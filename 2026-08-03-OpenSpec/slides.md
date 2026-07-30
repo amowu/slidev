@@ -1316,11 +1316,17 @@ layout: section
 
 # 五句話
 
+<v-clicks>
+
 - **問題不在 AI 不夠強**　而在於從頭到尾沒有人定義過什麼叫「完成」
 - **SDD 就是先定義完成**　驗收標準與 EARS 句型，把 AI 的猜測空間壓掉
 - **OpenSpec 適合我們**　`specs` 與 `changes` 分離，brownfield-first、純 Markdown、無 API key
 - **但它不是銀彈**　LLM 非確定性、自然語言天生曖昧，別期待「規格寫好就自動正確」
 - **真正的收穫是脈絡**　為什麼這樣決定、為什麼不那樣做，留在 repo 裡而不是某個人腦裡
+
+</v-clicks>
+
+<v-click>
 
 <div class="mt-10 text-center">
 
@@ -1329,6 +1335,8 @@ layout: section
 <div class="text-4xl mt-3 font-bold">反問它——完成了什麼？</div>
 
 </div>
+
+</v-click>
 
 <!--
 五句話收尾。
