@@ -13,16 +13,38 @@ Figma 在 Config India 2026 發表了 7 項新功能，其中 Specs、Guidelines
   1. **Hook**：OpenSpec 讓 AI 知道什麼叫「完成」，但 AI 對設計仍然是用猜的。
   2. **Map**：7 項發表依「Build on the canvas / Context for AI / Governance」三組整理成總覽。Centralized design systems 只在這裡帶一行。
   3. **Core**：Specs、Guidelines、Code source、MCP，各自一張以上的投影片。核心圖是程式碼端與 Figma 端的對照：
-     - `openspec/specs` ↔ Figma Specs
-     - `DESIGN.md` ↔ Guidelines
-     - `src/components` ↔ Code source
-     - 中間由 MCP 串接
+
+     ```
+      Code side (we already have)        Figma side (Config India 2026)
+      ---------------------------        -------------------------------
+      openspec/specs/  (behavior)   <->  Figma Specs
+      DESIGN.md        (DS rules)   <->  Guidelines
+      src/components   (real code)  <->  Code source
+                   \                       /
+                    +--- MCP: the bridge -+
+     ```
+
   4. **Extension**：Code layers 和 Payload，討論「設計稿本身就是程式碼」之後，交接點會移到哪裡。
   5. **Reality**：哪些還在 beta、AI credits 的成本、Code layers 的免費期已在 11/4 結束、我們現在能先試什麼。
   6. **Takeaways**：前端工程師可以先試的事。
 - 案例使用 Hahow Campus landing page 新版的「價格方案」區塊（尚未實作）：
   - 需求散落在五個地方：Figma frames、畫布上的手寫 spec、Notion PRD、Google Sheet、Drive。
   - 設計稿三個 tab 都用了「60 人」那一列的價格，跟 PRD 不一致，只讀設計稿的 AI 會做錯。
+
+  ```
+                     +------------------+
+                     |  AI / engineer   |
+                     +--------+---------+
+        what it reads today   |   what it never sees
+     +-----------+------------+----------+------------+
+     v           v            v          v            v
+   Figma       canvas       Notion     Google       Drive
+   frames      notes        PRD        Sheet        (course
+   (prices     (default     (price     ("see all     covers,
+    wrong)      tab)         table,     courses"     logos)
+                             CTA link)  links)
+  ```
+
 - 投影片的證據來自三個 spike（在 hahow-for-business-frontend 的拋棄式 worktree 執行，不進主線）：
   1. 只用 Figma MCP 讀設計稿產生程式碼。
   2. 從 Notion PRD 建立 Figma Spec，再讓 MCP 產生程式碼，跟 spike 1 比較。

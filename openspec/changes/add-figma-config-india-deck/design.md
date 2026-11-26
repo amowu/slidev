@@ -13,7 +13,19 @@
 - **案例素材**：
   - 設計稿：Campus landing page 新版的 Mockup 頁，共約 2,700 個節點；其中「價格方案」區塊是本次的案例
   - PRD：Notion 上的頁面更新需求單，價格方案在第 2 節
-  - 現有實作：hahow-for-business-frontend 現有的價格方案元件。這是舊的定價模型（10 個主題包加上合約年限），價格寫死在常數檔裡
+  - 現有實作：hahow-for-business-frontend 現有的價格方案元件。這是舊的定價模型（10 個主題包加上合約年限），價格寫死在常數檔裡。新版是整個定價模型都換掉，不只是改樣式：
+
+    ```
+     Old (live)                              New (Figma, in design)
+     -------------------------------------   -------------------------------------
+     10 theme packs, checkboxes, any mix     6 themes, 3 fixed plans
+     1-year / 2-year contract toggle         (choose 2 of 6 / choose 4 of 6 / all)
+     price = per account per year,           tabs = concurrent users 30 / 60 / 90
+       computed from the lookup tables       price = a fixed total per plan
+     group selector + calculated result      tabs + 3 cards + CTA
+     + mobile floating bar                   (floating bar? not in the design)
+    ```
+
 - **已知不一致**：設計稿三個 tab 都顯示「60 人」那一列的價格，PRD 則是三個 tab 各有不同的價格表。
 
 ## Goals / Non-Goals
@@ -46,6 +58,17 @@ spike 1 與 spike 2 使用：
 - 同一個 worktree 的同一個起點 commit
 
 唯一的差別是 spike 2 的 context 多了一份 Figma Spec。提示詞原文與模型 ID 都要記錄下來，放進講者備忘稿。
+
+```
+ Spike 1: design only            Spike 2: design + Spec
+ ----------------------          ------------------------------
+ AI sees: frames, text           AI sees: frames + Spec (prices,
+                                   default tab, CTA link, ...)
+ same model / same prompt / same starting commit
+         \                               /
+          +---- the before/after slide --+
+```
+
 - **原因**：只有控制變因，對照才有說服力。這也符合 spec 的要求：結果不符預期時要如實呈現，不能重跑到滿意為止。
 - **替代方案**：spike 2 也一併調整提示詞。這樣結果會比較漂亮，但結論就不成立了。
 
@@ -55,6 +78,12 @@ spike 1 與 spike 2 使用：
   - 預設選中「30 人」tab
   - 區塊說明文字
   - CTA 文字「立即諮詢」與連結
+
+  ```
+   Notion PRD --(Notion MCP read)--> Figma Spec --(Figma MCP read)--> code
+                (price table and rules            (spike 2 output)
+                 go into the Spec)
+  ```
 - **原因**：這就是官方宣稱的「從外部 context 起草 Spec」用法，同時也示範了 context 怎麼從 Notion 流到 Figma 再流到程式碼。
 - **替代方案**：在 Figma 裡手寫 Spec。這樣較穩，但少了 MCP 串接這個展示點。如果 MCP 寫入失敗，就改用這個方案，並在投影片上註明。
 
@@ -71,6 +100,15 @@ spike 1 與 spike 2 使用：
 - Spec 建在講者自己的新檔案裡。
 - Code layer 建在原稿價格方案區塊的複本上。
 - 每一次寫入前，都要先向講者確認。
+
+```
+ Spike                 Needs on the designer's file   Where writes go
+ --------------------  -----------------------------  ---------------------------
+ 1. MCP read -> code   view only                      worktree code; Figma untouched
+ 2. Spec -> code       view only                      a new Spec file of the speaker
+ 3. Code layers        none (works on a duplicate)    a duplicate in the speaker's
+                                                      own file
+```
 - **原因**：原稿屬於設計師；即使沒有權限擋住，也不應該在原稿上留下痕跡。
 - **替代方案**：請設計師開權限，直接在原稿上試。這會干擾設計師正在進行的工作，所以不採用。
 
