@@ -18,13 +18,13 @@
 
 ## 3. Spike 2：設計稿加上 Figma Spec（11/28）
 
-- [ ] 3.1 動手前向講者確認，再於講者自己的 drafts 建立一個新的 Figma Spec 檔，用 Notion MCP 讀取 PRD 第 2 節，寫入價格表、預設 tab、說明文字、CTA 文字與連結；先試一次，記錄 credits 扣在哪個 plan。驗證：Spec 檔可以開啟，內容與 PRD 一致；如果 MCP 寫入失敗，改成手寫，並在素材紀錄中註明。
+- [ ] 3.1 動手前向講者確認，再於講者自己的 drafts 建立一個新的 Figma Spec 檔，用 Notion MCP 讀取 PRD 第 2 節，由 Claude Code 透過 Figma MCP 寫入價格表、預設 tab、說明文字、CTA 文字與連結（不使用 Figma 內建的 Specs agent）；操作前後各記錄一次 Figma AI credits 餘額，確認外部 agent 寫 Spec 是否扣 credits、扣在哪個 plan。驗證：Spec 檔可以開啟，內容與 PRD 一致；如果 MCP 寫入失敗，改成手寫，並在素材紀錄中註明。
 - [ ] 3.2 從 2.1 的同一個起點 commit 開 worktree `spike/figma-config-with-spec`，使用 2.2 的同一段提示詞與同一個模型，額外提供 Spec 作為 context，讓 AI 實作。驗證：提示詞與 spike 1 逐字相同。
 - [ ] 3.3 用 2.4 的檢核表記錄結果，與 spike 1 並列比較；結果不符預期時如實記錄，並寫下可能的原因，不重跑。驗證：產出「spike 1 vs spike 2」對照表與截圖。
 
 ## 4. Spike 3 與功能試用（11/29–11/30，加分項）
 
-- [ ] 4.1 動手前向講者確認，再把價格方案的 frame 複製到講者自己的檔案，轉成 Code layer（從選取的 frame 下提示詞），只做一次。驗證：擷取可互動 tab 的截圖或短片；失敗或 credits 不足時，記錄原因，並把 Code layers 的證據等級標成「概念」。
+- [ ] 4.1 動手前向講者確認，再把價格方案的 frame 複製到講者自己的檔案，轉成 Code layer（從選取的 frame 下提示詞），只做一次；操作前後各記錄一次 Figma AI credits 餘額，並記下這次走的是 Figma agent 還是外部 agent 透過 MCP。驗證：擷取可互動 tab 的截圖或短片；失敗或 credits 不足時，記錄原因，並把 Code layers 的證據等級標成「概念」。
 - [ ] 4.2 決定要不要在講者的個人 team 試用 Guidelines：如果要，建一個最小的 library 和一份 guideline，試一次並截圖；如果不要，記錄原因。驗證：素材紀錄中有 Guidelines 的證據等級與理由。
 - [ ] 4.3 試用 MCP 新工具 `html_to_figma` 或 `generate_image` 其中一項（寫入講者自己的檔案）。驗證：有截圖，或記錄這項不放進簡報的理由。
 - [ ] 4.4 刪除所有 spike worktree 與本機分支，確認沒有推到遠端。驗證：`git worktree list` 與 `git branch --list 'spike/figma-config-*'` 都沒有結果，`git ls-remote` 也查不到這些分支。

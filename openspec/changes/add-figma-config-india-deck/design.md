@@ -73,7 +73,7 @@ spike 1 與 spike 2 使用：
 - **替代方案**：spike 2 也一併調整提示詞。這樣結果會比較漂亮，但結論就不成立了。
 
 ### D3. Spec 的內容來源是 Notion PRD，以 MCP 匯入
-- **流程**：用 Notion MCP 讀取 PRD 第 2 節 → 在 Figma 建立一個新的 Spec 檔 → 寫入以下內容：
+- **流程**：用 Notion MCP 讀取 PRD 第 2 節 → 在 Figma 建立一個新的 Spec 檔 → 寫入以下內容。Spec 由 Claude Code 透過 Figma MCP 寫入，不使用 Figma 內建的 Specs agent，讓 spike 2 和 spike 1 一樣只走自帶 agent 這條路徑（見 Risks 的成本項）：
   - 價格表
   - 預設選中「30 人」tab
   - 區塊說明文字
@@ -138,6 +138,22 @@ spike 1 與 spike 2 使用：
   → Spec 改用 D3 的替代方案，Code layer 本來就是加分項，可以直接放棄。投影片的證據等級改標成「概念」。
 - **AI credits 不夠，或扣在非預期的 team。**
   → 先建一個小檔案試一次，看 credits 扣在哪個 plan。限制 Code layer 只做一次。
+- **兩種付費路徑的成本不同，而且官方文件沒有寫完整。**
+
+  ```
+   Path A: Figma's built-in agent        Path B: own agent (Claude Code) via MCP
+   ------------------------------        ---------------------------------------
+   Figma agent / Make / Code layers /    reasoning paid by the agent subscription
+   Specs agent                           Figma side: mostly rate limits only
+   -> Figma AI credits                   still uses Figma credits: generate_image,
+   -> no BYO model in the docs             generate_vector_illustration, send_prompt,
+                                           send_code_to_figma (after first upload)
+   Unknown: does Path B creating a Code layer or Spec use Figma credits?
+  ```
+
+  → spike 1 與 2 都走 Path B。每次寫入 Figma 的操作（3.1、4.1）前後都記錄 credits 餘額，把「官方未說明」的部分變成實測數據。量不到的話，投影片照 spec 標示「官方未說明」。
+- **MCP rate limit 用完。** read 工具有每日與每分鐘的上限，依方案與席位而定。
+  → spike 只讀價格方案區塊，不反覆讀整頁；先用 `get_metadata` 確定節點，再呼叫 `get_design_context`。
 - **hahow-for-business-frontend 的 worktree 需要安裝依賴，或 dev server 跑不起來。**
   → spike 的對照以程式碼差異與元件截圖（例如 Storybook）為主，不一定要整頁跑起來。
 - **內部資訊外流。**

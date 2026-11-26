@@ -90,11 +90,19 @@ Core 段 SHALL 為 Specs、Guidelines、Code source、MCP 各提供至少一張�
 - **THEN** 投影片如實呈現，並說明可能的原因，不重跑到出現想要的結果才放上去
 
 ### Requirement: 誠實呈現成本與成熟度
-Reality 段 SHALL 說明各項功能的釋出狀態、哪些功能會消耗 AI credits，以及 Code layers 的免費期已在 2026-11-04 結束。
+Reality 段 SHALL 說明各項功能的釋出狀態、哪些功能會消耗 AI credits，以及 Code layers 的免費期已在 2026-11-04 結束。Reality 段 SHALL 區分兩種付費路徑：使用 Figma 內建 agent 會消耗 Figma AI credits；透過 MCP 自帶 agent 時，推理成本由該 agent 的訂閱支付，Figma 端主要受 rate limit 限制。
 
 #### Scenario: 聽眾想自己試
 - **WHEN** 聽眾想知道哪些功能現在就能用、要不要付費
 - **THEN** Reality 段能回答哪些可以立刻試、哪些會花 credits、哪些還拿不到
+
+#### Scenario: 已在使用 Claude Code 的工程師
+- **WHEN** 聽眾想知道用自己的 AI agent 透過 Figma MCP 工作要付什麼費用
+- **THEN** Reality 段說明推理成本由 agent 的訂閱支付，Figma 端主要是 rate limit，並列出官方文件中仍會消耗 Figma credits 的 MCP 工具
+
+#### Scenario: 官方文件未說明的成本
+- **WHEN** 某個操作的 credits 消耗在官方文件中沒有寫明（例如外部 agent 透過 MCP 建立 Code layer 或 Spec）
+- **THEN** 投影片呈現 spike 實測到的結果；沒有實測的話，就標示「官方未說明」，不做推論
 
 ### Requirement: 前端工程師的行動建議
 Takeaways 段 SHALL 列出前端工程師在分享後可以實際採取的行動，每一項都限於目前已開放的功能。
