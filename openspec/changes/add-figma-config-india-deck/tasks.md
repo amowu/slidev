@@ -32,9 +32,9 @@
 
 ## 5. 建立簡報骨架（12/1）
 
-- [ ] 5.1 把 `_template/` 複製成 `2026-12-07-Figma-Config-India/`，frontmatter 設定 `theme: seriph`、標題與日期。驗證：`npm run dev -- 2026-12-07-Figma-Config-India/slides.md` 可以啟動。
-- [ ] 5.2 建立六段的分段投影片，加上各段的時間預算（Hook 2、Map 3、Core 10、Extension 5、Reality 3、Takeaways 2 分鐘）。驗證：段落順序符合 spec「簡報以單一觀點串聯」。
-- [ ] 5.3 把第 1–4 組的素材整理進 `assets/`，移除經銷商聯絡資訊與 MCP 資產網址。驗證：在簡報資料夾中，用 PRD 上的經銷商電話、Email、地址逐一搜尋，並執行 `grep -r 'figma.com/api/mcp' 2026-12-07-Figma-Config-India/`，都沒有結果。
+- [x] 5.1 把 `_template/` 複製成 `2026-12-07-Figma-Config-India/`，frontmatter 設定 `theme: seriph`、標題與日期。驗證：`npm run dev -- 2026-12-07-Figma-Config-India/slides.md` 可以啟動。
+- [x] 5.2 建立六段的分段投影片，加上各段的時間預算（Hook 2、Map 3、Core 10、Extension 5、Reality 3、Takeaways 2 分鐘）。驗證：段落順序符合 spec「簡報以單一觀點串聯」。
+- [x] 5.3 把第 1–4 組的素材整理進 `assets/`，移除經銷商聯絡資訊與 MCP 資產網址。驗證：在簡報資料夾中，用 PRD 上的經銷商電話、Email、地址逐一搜尋，並執行 `grep -r 'figma.com/api/mcp' 2026-12-07-Figma-Config-India/`，都沒有結果。
 
 ## 6. 撰寫投影片與講者備忘稿（12/1–12/4）
 
