@@ -18,9 +18,9 @@
 
 ## 3. Spike 2：設計稿加上 Figma Spec（11/28）
 
-- [ ] 3.1 動手前向講者確認，再於講者自己的 drafts 建立一個新的 Figma Spec 檔，用 Notion MCP 讀取 PRD 第 2 節，由 Claude Code 透過 Figma MCP 寫入價格表、預設 tab、說明文字、CTA 文字與連結（不使用 Figma agent）；操作前後各記錄一次 Figma AI credits 餘額，確認外部 agent 寫 Spec 是否扣 credits、扣在哪個 plan。驗證：Spec 檔可以開啟，內容與 PRD 一致；如果 MCP 寫入失敗，改成手寫，並在素材紀錄中註明。
-- [ ] 3.2 從 2.1 的同一個起點 commit 開 worktree `spike/figma-config-with-spec`，使用 2.2 的同一段提示詞與同一個模型，額外提供 Spec 作為 context，讓 AI 實作。驗證：提示詞與 spike 1 逐字相同。
-- [ ] 3.3 用 2.4 的檢核表記錄結果，與 spike 1 並列比較；結果不符預期時如實記錄，並寫下可能的原因，不重跑。驗證：產出「spike 1 vs spike 2」對照表與截圖。
+- [x] 3.1 動手前向講者確認，再於講者自己的 drafts 建立一個新的 Figma Spec 檔，用 Notion MCP 讀取 PRD 第 2 節，由 Claude Code 透過 Figma MCP 寫入價格表、預設 tab、說明文字、CTA 文字與連結（不使用 Figma agent）；操作前後各記錄一次 Figma AI credits 餘額，確認外部 agent 寫 Spec 是否扣 credits、扣在哪個 plan。驗證：Spec 檔可以開啟，內容與 PRD 一致；如果 MCP 寫入失敗，改成手寫，並在素材紀錄中註明。
+- [x] 3.2 從 2.1 的同一個起點 commit 開 worktree `spike/figma-config-with-spec`，使用 2.2 的同一段提示詞與同一個模型，額外提供 Spec 作為 context，讓 AI 實作。驗證：提示詞與 spike 1 逐字相同。
+- [x] 3.3 用 2.4 的檢核表記錄結果，與 spike 1 並列比較；結果不符預期時如實記錄，並寫下可能的原因，不重跑。驗證：產出「spike 1 vs spike 2」對照表與截圖。
 
 ## 4. Spike 3 與功能試用（11/29–11/30，加分項）
 
