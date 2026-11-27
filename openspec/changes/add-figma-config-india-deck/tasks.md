@@ -24,10 +24,10 @@
 
 ## 4. Spike 3 與功能試用（11/29–11/30，加分項）
 
-- [ ] 4.1 動手前向講者確認，再把價格方案的 frame 複製到講者自己的檔案，轉成 Code layer（從選取的 frame 下提示詞），只做一次；操作前後各記錄一次 Figma AI credits 餘額，並記下這次走的是 Figma agent 還是外部 agent 透過 MCP。驗證：擷取可互動 tab 的截圖或短片；失敗或 credits 不足時，記錄原因，並把 Code layers 的證據等級標成「概念」。
-- [ ] 4.2 讓 Claude 綜合 `DESIGN.md`、設計稿引用的 team library（Figma MCP 唯讀，包含疑似已寫有規則的 library）與 codebase 的既有元件，起草一份價格方案相關元件的 guideline，不寫入 Figma。驗證：草稿存檔，裡面每一條規則都能對應到某個來源；素材紀錄中 Guidelines 的證據等級是「概念」並附上草稿。
+- [x] 4.1 動手前向講者確認，再把價格方案的 frame 複製到講者自己的檔案，轉成 Code layer（從選取的 frame 下提示詞），只做一次；操作前後各記錄一次 Figma AI credits 餘額，並記下這次走的是 Figma agent 還是外部 agent 透過 MCP。驗證：擷取可互動 tab 的截圖或短片；失敗或 credits 不足時，記錄原因，並把 Code layers 的證據等級標成「概念」。
+- [x] 4.2 讓 Claude 綜合 `DESIGN.md`、設計稿引用的 team library（Figma MCP 唯讀，包含疑似已寫有規則的 library）與 codebase 的既有元件，起草一份價格方案相關元件的 guideline，不寫入 Figma。驗證：草稿存檔，裡面每一條規則都能對應到某個來源；素材紀錄中 Guidelines 的證據等級是「概念」並附上草稿。
 - [ ] 4.3 （有空再做）詢問 library 擁有者能不能把 4.2 的草稿加到已發布的 library 上；如果成功，就在設計稿上試一次並截圖，再把證據等級升級成「實測」。驗證：記錄詢問結果；有套用的話附上截圖。
-- [ ] 4.4 試用 MCP 新工具 `html_to_figma` 或 `generate_image` 其中一項（寫入講者自己的檔案）。驗證：有截圖，或記錄這項不放進簡報的理由。
+- [x] 4.4 試用 MCP 新工具 `html_to_figma` 或 `generate_image` 其中一項（寫入講者自己的檔案）。驗證：有截圖，或記錄這項不放進簡報的理由。
 - [ ] 4.5 刪除所有 spike worktree 與本機分支，確認沒有推到遠端。驗證：`git worktree list` 與 `git branch --list 'spike/figma-config-*'` 都沒有結果，`git ls-remote` 也查不到這些分支。
 
 ## 5. 建立簡報骨架（12/1）
