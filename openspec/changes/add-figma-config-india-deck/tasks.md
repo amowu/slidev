@@ -11,10 +11,10 @@
 
 ## 2. Spike 1：只用設計稿（11/27）
 
-- [ ] 2.1 在 hahow-for-business-frontend 從 `main` 開 worktree `spike/figma-config-design-only`，記錄起點 commit。驗證：`git worktree list` 列出這個 worktree，主線工作目錄沒有變化。
-- [ ] 2.2 寫好固定的提示詞（實作 Campus 價格方案新版區塊的 XL 與 XS），記錄提示詞原文與使用的模型名稱和版本。驗證：提示詞存成檔案，spike 2 會原封不動使用。
-- [ ] 2.3 只提供設計稿的 context（Figma MCP `get_design_context`），讓 AI 實作。驗證：產出的程式碼留在 worktree 中，擷取 diff。
-- [ ] 2.4 記錄結果：三個 tab 的價格、AI 讀的是整頁 mockup 還是「價格方案 spec」示意區（60 與 90 人 tab 的價格從哪裡來）、預設 tab、CTA 文字與連結、有沒有沿用 `DESIGN.md` 的 token 與既有元件，並擷取畫面（Storybook 或 dev server 皆可）。驗證：結果寫成一張檢核表，每一項都標明正確或錯誤，並附上證據。
+- [x] 2.1 在 hahow-for-business-frontend 從 `main` 開 worktree `spike/figma-config-design-only`，記錄起點 commit。驗證：`git worktree list` 列出這個 worktree，主線工作目錄沒有變化。
+- [x] 2.2 寫好固定的提示詞（實作 Campus 價格方案新版區塊的 XL 與 XS），記錄提示詞原文與使用的模型名稱和版本。驗證：提示詞存成檔案，spike 2 會原封不動使用。
+- [x] 2.3 只提供設計稿的 context（Figma MCP `get_design_context`），讓 AI 實作。驗證：產出的程式碼留在 worktree 中，擷取 diff。
+- [x] 2.4 記錄結果：三個 tab 的價格、AI 讀的是整頁 mockup 還是「價格方案 spec」示意區（60 與 90 人 tab 的價格從哪裡來）、預設 tab、CTA 文字與連結、有沒有沿用 `DESIGN.md` 的 token 與既有元件，並擷取畫面（Storybook 或 dev server 皆可）。驗證：結果寫成一張檢核表，每一項都標明正確或錯誤，並附上證據。
 
 ## 3. Spike 2：設計稿加上 Figma Spec（11/28）
 
