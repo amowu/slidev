@@ -28,7 +28,7 @@
 - [x] 4.2 讓 Claude 綜合 `DESIGN.md`、設計稿引用的 team library（Figma MCP 唯讀，包含疑似已寫有規則的 library）與 codebase 的既有元件，起草一份價格方案相關元件的 guideline，不寫入 Figma。驗證：草稿存檔，裡面每一條規則都能對應到某個來源；素材紀錄中 Guidelines 的證據等級是「概念」並附上草稿。
 - [ ] 4.3 （有空再做）詢問 library 擁有者能不能把 4.2 的草稿加到已發布的 library 上；如果成功，就在設計稿上試一次並截圖，再把證據等級升級成「實測」。驗證：記錄詢問結果；有套用的話附上截圖。
 - [x] 4.4 試用 MCP 新工具 `html_to_figma` 或 `generate_image` 其中一項（寫入講者自己的檔案）。驗證：有截圖，或記錄這項不放進簡報的理由。
-- [ ] 4.5 刪除所有 spike worktree 與本機分支，確認沒有推到遠端。驗證：`git worktree list` 與 `git branch --list 'spike/figma-config-*'` 都沒有結果，`git ls-remote` 也查不到這些分支。
+- [x] 4.5 刪除所有 spike worktree 與本機分支，確認沒有推到遠端。驗證：`git worktree list` 與 `git branch --list 'spike/figma-config-*'` 都沒有結果，`git ls-remote` 也查不到這些分支。
 
 ## 5. 建立簡報骨架（12/1）
 
