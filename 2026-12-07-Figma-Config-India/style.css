@@ -1,0 +1,65 @@
+/*
+ * 本簡報的樣式覆寫。Slidev 會自動載入與 slides.md 同層的 style.css。
+ */
+
+/*
+ * 證據等級標籤。每張介紹 Config India 功能的投影片都要放一個（見 spec「標示證據等級」）。
+ *
+ * 用法：<span class="evidence evidence-tested">實測</span>
+ *   evidence-tested   實測：講者親自操作過，同一張或下一張附產出
+ *   evidence-concept  概念：依官方文件說明，未實際操作（或已有 AI 產出但未套用到 Figma）
+ *   evidence-locked   未開放：closed beta 或 preview，拿不到
+ */
+.evidence {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.35rem 0.75rem;
+  vertical-align: middle;
+}
+
+.evidence-tested {
+  background: #d9f7ee;
+  color: #1c6b48;
+}
+
+.evidence-concept {
+  background: #fff1d6;
+  color: #8a5a00;
+}
+
+.evidence-locked {
+  background: #ececec;
+  color: #595959;
+}
+
+html.dark .evidence-tested {
+  background: #1c3b30;
+  color: #8fd6b8;
+}
+
+html.dark .evidence-concept {
+  background: #3d3220;
+  color: #f0c46c;
+}
+
+html.dark .evidence-locked {
+  background: #333;
+  color: #bbb;
+}
+
+/* 尚未完成的骨架內容，第 6 組寫完後應該全部消失 */
+.todo {
+  border: 2px dashed #bfbfbf;
+  border-radius: 8px;
+  color: #8c8c8c;
+  padding: 0.75rem 1rem;
+}
+
+/* 教學用短範例：指令、目錄樹、格式示意（沿用 2026-08-03-OpenSpec） */
+.code-lg .slidev-code {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}
