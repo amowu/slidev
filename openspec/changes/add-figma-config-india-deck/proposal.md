@@ -49,12 +49,12 @@ Figma 在 Config India 2026 發表了 7 項新功能，其中 Specs、Guidelines
   1. 只用 Figma MCP 讀設計稿產生程式碼。
   2. 從 Notion PRD 建立 Figma Spec，再讓 MCP 產生程式碼，跟 spike 1 比較。
   3. （加分項）把價格方案 frame 轉成 Code layer。只在複本或自己的檔案上操作。
-- Guidelines 只講概念，必要時在講者的個人 team 做小規模試用。Code source 在 closed beta，明確標註「未實測」。
+- Guidelines 由 Claude 綜合 `DESIGN.md`、team 的 Figma library 與 codebase 起草內容，證據等級標成「概念」並附上實際產出；有空再請 library 擁有者實際加進 Figma。Code source 在 closed beta，明確標註「未開放」。
 
 ## Capabilities
 
 ### New Capabilities
-- `figma-config-india-deck`：這份簡報必須傳達的內容與呈現規則，包括故事線、每項功能的證據等級（實測、概念、未實測）、案例素材，以及講者備忘稿的完整度。
+- `figma-config-india-deck`：這份簡報必須傳達的內容與呈現規則，包括故事線、每項功能的證據等級（實測、概念、未開放）、案例素材，以及講者備忘稿的完整度。
 
 ### Modified Capabilities
 （無）
@@ -66,5 +66,4 @@ Figma 在 Config India 2026 發表了 7 項新功能，其中 Specs、Guidelines
 - **Figma**：設計師的原稿只做唯讀操作。所有寫入（Spec、Code layer）都在新檔案或複本上進行，每次寫入前會先確認。
 - **成本**：Specs、Code layers、MCP `generate_image` 都會消耗 AI credits。Code layers 已無免費期。
 - **待確認**：
-  - 設計稿與 PRD 的價格差異，需要跟設計師確認。
   - 簡報資料夾日期暫定 12/7，對應分享日。

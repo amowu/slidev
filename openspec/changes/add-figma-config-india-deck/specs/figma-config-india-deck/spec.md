@@ -60,6 +60,10 @@ Core 段 SHALL 為 Specs、Guidelines、Code source、MCP 各提供至少一張�
 - **WHEN** 投影片標示「實測」
 - **THEN** 同一張或緊接的投影片附上該次操作的實際產出（截圖、程式碼片段或錄影）
 
+#### Scenario: 概念加實際產出
+- **WHEN** 功能無法在 Figma 中實際套用，但講者已用 AI 產出可以展示的內容（例如 Guidelines 的草稿）
+- **THEN** 投影片標示「概念」，附上產出內容，並註明「尚未套用到 Figma」
+
 ### Requirement: 以 Campus 價格方案作為案例
 簡報 SHALL 使用 Hahow Campus landing page 新版的「價格方案」區塊作為貫穿全場的案例，並呈現它的需求 context 分散在 Figma frames、畫布上的手寫註記、Notion PRD、Google Sheet、Google Drive 五個地方。
 
@@ -68,15 +72,15 @@ Core 段 SHALL 為 Specs、Guidelines、Code source、MCP 各提供至少一張�
 - **THEN** 能看出五個 context 來源各自提供什麼，以及哪些是只讀設計稿時看不到的
 
 ### Requirement: 呈現設計稿與 PRD 的價格不一致
-簡報 SHALL 並列設計稿三個 tab 的價格與 PRD 價格表，指出兩者哪裡不一致，並說明只讀設計稿的 AI 會因此產生錯誤的結果。如果分享前設計師確認設計稿才是正確版本，簡報 MUST 改成反映確認後的事實。
+簡報 SHALL 並列設計稿三個 tab 的價格與 PRD 價格表，以 PRD 為正確版本，指出設計稿哪裡錯誤，並說明只讀設計稿的 AI 會因此產生錯誤的結果。
 
-#### Scenario: 不一致未修正
-- **WHEN** 分享時設計稿與 PRD 仍不一致
+#### Scenario: 設計稿仍未修正
+- **WHEN** 分享時設計稿的價格仍與 PRD 不一致
 - **THEN** 投影片並列兩份價格，標出 30 人與 90 人兩列的差異，並註明擷取日期
 
-#### Scenario: 設計師確認後
-- **WHEN** 設計師在分享前確認了正確價格
-- **THEN** 投影片如實說明確認結果，不把已釐清的問題當成仍然存在
+#### Scenario: 設計稿已在分享前修正
+- **WHEN** 設計師在分享前已依 PRD 修正設計稿
+- **THEN** 投影片使用註明日期的修正前擷取畫面，並說明設計稿之後已依 PRD 修正，不把已修正的問題當成仍然存在
 
 ### Requirement: 有 Spec 與沒有 Spec 的對照
 簡報 SHALL 並列兩次 AI 產生的實作結果：一次只用 Figma 設計稿，另一次加上 Figma Spec。兩次使用相同的提示詞與模型，差別只在有沒有 Spec。投影片 MUST 如實呈現實際結果，即使結果跟預期不同。
