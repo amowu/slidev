@@ -29,7 +29,8 @@ Figma 在 Config India 2026 發表了 7 項新功能，其中 Specs、Guidelines
   6. **Takeaways**：前端工程師可以先試的事。
 - 案例使用 Hahow Campus landing page 新版的「價格方案」區塊（尚未實作）：
   - 需求散落在五個地方：Figma frames、畫布上的手寫 spec、Notion PRD、Google Sheet、Drive。
-  - 設計稿三個 tab 都用了「60 人」那一列的價格，跟 PRD 不一致，只讀設計稿的 AI 會做錯。
+  - 整頁 mockup 只畫了預設的 30 人 tab，價格正確；唯一畫出三個 tab 狀態的「價格方案 spec」示意區，全部用了 60 人那一列的價格。90 人 tab 的正確價格只存在 PRD，只讀設計稿的 AI 會做錯。
+  - 非預設狀態只畫在示意區、而且畫錯，這本身就是設計與開發交接的缺口，會在分享中直接點出來；所以分享前刻意不通知設計師修正。
 
   ```
                      +------------------+

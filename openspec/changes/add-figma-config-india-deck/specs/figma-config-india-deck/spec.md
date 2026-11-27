@@ -72,7 +72,11 @@ Core 段 SHALL 為 Specs、Guidelines、Code source、MCP 各提供至少一張�
 - **THEN** 能看出五個 context 來源各自提供什麼，以及哪些是只讀設計稿時看不到的
 
 ### Requirement: 呈現設計稿與 PRD 的價格不一致
-簡報 SHALL 並列設計稿三個 tab 的價格與 PRD 價格表，以 PRD 為正確版本，指出設計稿哪裡錯誤，並說明只讀設計稿的 AI 會因此產生錯誤的結果。
+簡報 SHALL 以 PRD 為正確版本，並列 PRD 價格表、整頁 mockup 的價格，以及「價格方案 spec」示意區三個 tab 的價格，指出示意區哪裡錯誤，並說明只讀設計稿的 AI 會因此產生錯誤的結果。簡報 SHALL 點出這是交接流程的缺口：非預設狀態只畫在示意區，而且畫錯了。
+
+#### Scenario: 點出交接缺口
+- **WHEN** 讀者看到價格不一致的投影片
+- **THEN** 能看出整頁 mockup 只畫了預設 tab，60 與 90 人的狀態只出現在示意區，90 人 tab 的正確價格只存在 PRD
 
 #### Scenario: 設計稿仍未修正
 - **WHEN** 分享時設計稿的價格仍與 PRD 不一致

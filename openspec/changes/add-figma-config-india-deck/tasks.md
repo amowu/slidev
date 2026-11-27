@@ -4,17 +4,17 @@
 
 ## 1. 擷取案例素材（11/26–11/27）
 
-- [ ] 1.1 用 Figma MCP 唯讀擷取設計稿「價格方案」區塊的 XL 與 XS 截圖，以及畫布上的「價格方案 spec」手寫註記，在檔名註明擷取日期，存進 scratch 素材資料夾。驗證：截圖能清楚看出三個 tab 的價格。
-- [ ] 1.2 擷取 Notion PRD 第 2 節的價格表，整理成「設計稿 vs PRD」對照表，標出不一致的 30 人與 90 人兩列。驗證：對照表的每個數字都能回溯到截圖或 PRD 原文。
-- [ ] 1.3 整理案例 context 的五個來源（Figma frames、畫布註記、Notion PRD、Google Sheet、Drive），寫出各自提供什麼。驗證：每個來源至少對應到一項 AI 只讀設計稿時看不到的資訊。
-- [ ] 1.4 在 1.1 的截圖完成後，通知設計師設計稿的價格要依 PRD 修正（價格以 PRD 為準），記下通知日期。驗證：通知已送出，而且修正前的截圖已存檔並標註日期。
+- [x] 1.1 用 Figma MCP 唯讀擷取設計稿「價格方案」區塊的 XL 與 XS 截圖，以及畫布上的「價格方案 spec」手寫註記，在檔名註明擷取日期，存進 scratch 素材資料夾。驗證：截圖能清楚看出三個 tab 的價格。
+- [x] 1.2 擷取 Notion PRD 第 2 節的價格表，整理成「設計稿 vs PRD」對照表，標出不一致的 30 人與 90 人兩列。驗證：對照表的每個數字都能回溯到截圖或 PRD 原文。
+- [x] 1.3 整理案例 context 的五個來源（Figma frames、畫布註記、Notion PRD、Google Sheet、Drive），寫出各自提供什麼。驗證：每個來源至少對應到一項 AI 只讀設計稿時看不到的資訊。
+- [x] 1.4 記錄「分享前不通知設計師修正」的決定與理由（交接缺口是分享要點出的問題；spike 需要讀到現狀），並確認修正前的截圖已存檔並標註日期。驗證：素材紀錄中有這項決定，`1-case/` 中有帶日期的示意區、整頁 mockup 與新舊對照截圖。
 
 ## 2. Spike 1：只用設計稿（11/27）
 
 - [ ] 2.1 在 hahow-for-business-frontend 從 `main` 開 worktree `spike/figma-config-design-only`，記錄起點 commit。驗證：`git worktree list` 列出這個 worktree，主線工作目錄沒有變化。
 - [ ] 2.2 寫好固定的提示詞（實作 Campus 價格方案新版區塊的 XL 與 XS），記錄提示詞原文與使用的模型名稱和版本。驗證：提示詞存成檔案，spike 2 會原封不動使用。
 - [ ] 2.3 只提供設計稿的 context（Figma MCP `get_design_context`），讓 AI 實作。驗證：產出的程式碼留在 worktree 中，擷取 diff。
-- [ ] 2.4 記錄結果：三個 tab 的價格、預設 tab、CTA 文字與連結、有沒有沿用 `DESIGN.md` 的 token 與既有元件，並擷取畫面（Storybook 或 dev server 皆可）。驗證：結果寫成一張檢核表，每一項都標明正確或錯誤，並附上證據。
+- [ ] 2.4 記錄結果：三個 tab 的價格、AI 讀的是整頁 mockup 還是「價格方案 spec」示意區（60 與 90 人 tab 的價格從哪裡來）、預設 tab、CTA 文字與連結、有沒有沿用 `DESIGN.md` 的 token 與既有元件，並擷取畫面（Storybook 或 dev server 皆可）。驗證：結果寫成一張檢核表，每一項都標明正確或錯誤，並附上證據。
 
 ## 3. Spike 2：設計稿加上 Figma Spec（11/28）
 
@@ -55,5 +55,6 @@
 
 ## Workflow follow-up
 
+- 12/7 分享後，通知設計師依 PRD 修正「價格方案 spec」示意區的價格。
 - 12/7 分享後，把簡報 commit 進本 repo，再 archive 這個 change。
 - archive 後，確認 `openspec/specs/figma-config-india-deck/spec.md` 已建立，而且 Purpose 正確。
